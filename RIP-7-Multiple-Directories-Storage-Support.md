@@ -1,7 +1,7 @@
 # Status
 Current State: Proposed     
 Authors: Jason918     
-Shepherds: [author](github_link)     
+Shepherds: Zhendong Liu     
 Mailing List discussion: <apache mailing list archive>     
 Pull Request: #PR_NUMBER     
 Released: <relased_version>    
