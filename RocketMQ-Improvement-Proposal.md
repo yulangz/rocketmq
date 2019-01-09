@@ -2,4 +2,4 @@ In the last few years, we use the [Jira](https://issues.apache.org/jira/projects
 
 RIPs should be used for significant user-facing or cross-cutting changes, not small incremental improvements. When in doubt, if a committer thinks a change needs an RIP, it does. 
 
-It is easy to start a RIP from sending proposals to dev mail lists. And the whole procedure of a RIP may follow below [RIP Template]()
+It is easy to start a RIP from sending proposals to dev mail lists. And the whole procedure of a RIP may follow below [RIP Template]().
