@@ -18,6 +18,6 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 * RIP-3 Accepted Release [RocketMQ Python Client](https://github.com/apache/rocketmq/wiki/RIP-3-RocketMQ-Python-Client)
 * RIP-4 Accepted Release [RocketMQ Go Client](https://github.com/apache/rocketmq/wiki/RIP-4-RocketMQ-Go-Client)
 * RIP-5 Accepted Release [RocketMQ Message Trace](https://github.com/apache/rocketmq/wiki/RIP-6-Message-Track-Trace)
-
+* RIP-7 Discuss Inactive [Multiple Directories Storage Support](https://github.com/apache/rocketmq/wiki/RIP-7-Multiple-Directories-Storage-Support)
 ### CN
 * RIP-6 Accepted [RocketMQ ACL](https://github.com/apache/rocketmq/wiki/RIP-5-RocketMQ-ACL)
