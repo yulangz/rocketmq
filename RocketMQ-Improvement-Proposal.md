@@ -4,7 +4,7 @@ RIPs should be used for significant user-facing or cross-cutting changes, not sm
 
 It is easy to start a RIP from sending proposals to dev mail lists. And the whole procedure of a RIP may follow the process:
 
-1. Create a proposal as the [template](). Take the next available RIP number and give your proposal a descriptive heading. 
+1. Create a proposal as the [template](https://docs.google.com/document/d/19JssoEGnNp1x9MoXVMoeGCWSBnBdyv97FuGcIH1fV1g/edit). Take the next available RIP number and give your proposal a descriptive heading. 
 
 2. Start a [DISCUSS] thread on the Apache RocketMQ dev mailing list. Please ensure that the subject of the thread is of the format [DISCUSS] RIP-{your RIP number} {your RIP heading} The discussion should happen on the mailing list not on the wiki since the wiki comment system doesn't work well for larger discussions. In the process of the discussion, you may update the proposal. You should let people know the changes you are making. When you feel you have a finalized proposal.
 
