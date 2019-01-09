@@ -4,13 +4,13 @@ RIPs should be used for significant user-facing or cross-cutting changes, not sm
 
 It is easy to start a RIP from sending proposals to dev mail lists. And the whole procedure of a RIP may follow the process:
 
-Create a proposal as the [template](). Take the next available RIP number and give your proposal a descriptive heading. 
+1. Create a proposal as the [template](). Take the next available RIP number and give your proposal a descriptive heading. 
 
-Start a [DISCUSS] thread on the Apache RocketMQ dev mailing list. Please ensure that the subject of the thread is of the format [DISCUSS] RIP-{your RIP number} {your RIP heading} The discussion should happen on the mailing list not on the wiki since the wiki comment system doesn't work well for larger discussions. In the process of the discussion, you may update the proposal. You should let people know the changes you are making. When you feel you have a finalized proposal.
+2. Start a [DISCUSS] thread on the Apache RocketMQ dev mailing list. Please ensure that the subject of the thread is of the format [DISCUSS] RIP-{your RIP number} {your RIP heading} The discussion should happen on the mailing list not on the wiki since the wiki comment system doesn't work well for larger discussions. In the process of the discussion, you may update the proposal. You should let people know the changes you are making. When you feel you have a finalized proposal.
 
-Once the proposal is finalized and some committers(Shepherd) are willing to support, please call a [VOTE] to have the proposal adopted. These proposals are more serious than code changes and more serious even than release votes. The criteria for acceptance is lazy majority. The vote should remain open for 72 hours.
+3. Once the proposal is finalized and some committers(Shepherd) are willing to support, please call a [VOTE] to have the proposal adopted. These proposals are more serious than code changes and more serious even than release votes. The criteria for acceptance is lazy majority. The vote should remain open for 72 hours.
 
-Please update the RIP wiki page, and the index below, to reflect the current stage of the RIP after a vote. This acts as the permanent record indicating the result of the RIP (e.g., Accepted or Rejected). Also report the result of the RIP vote to the voting thread on the mailing list so the conclusion is clear.
+4. Please update the RIP wiki page, and the index below, to reflect the current stage of the RIP after a vote. This acts as the permanent record indicating the result of the RIP (e.g., Accepted or Rejected). Also report the result of the RIP vote to the voting thread on the mailing list so the conclusion is clear.
 
 ### EN
 * RIP-1 Accepted Inactive [RocketMQ MQTT Bridge](https://github.com/apache/rocketmq/wiki/RIP-1-MQTT-Bridge)
