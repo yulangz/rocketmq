@@ -1,24 +1,25 @@
 # Status
-    Current State: Proposed    
-    Authors: HuzongTang     
-    Shepherds: Zhendong     
-    Mailing List Discussion: <apache mailing list archive>    
-    Pull Request: #PR_NUMBER    
-    Released: <released_version>    
+Current State: Proposed    
+Authors: HuzongTang     
+Shepherds: Zhendong     
+Mailing List Discussion: <apache mailing list archive>    
+Pull Request: #PR_NUMBER    
+Released: <released_version>  
+ 
 # Background & Motivation
 ## What do we need to do
-      Message track trace refers to the consumption processing of a message which is sent from the producer instance has arrived the broker,and then has been consumed by the consumer instance.In the whole process, the information of time, location and other related services(including Client and Broker) is aggregated into the complete link information of message communication.      
-      In MQ system, the complete link of a message contains three roles: producer, broker server and consumer.In the process of message communicaton, each role adds relevant information to the track trace link.By aggregating these information,it can provide some powerful support to user.      
-     About the Apache RocketMQ project,I will add the feature of message track trace which can help users query every complete link data of a message exactly.This funcation is important to RocketMQ,especially in some  financial application fields.     
+Message track trace refers to the consumption processing of a message which is sent from the producer instance has arrived the broker,and then has been consumed by the consumer instance.In the whole process, the information of time, location and other related services(including Client and Broker) is aggregated into the complete link information of message communication.      
+In MQ system, the complete link of a message contains three roles: producer, broker server and consumer.In the process of message communicaton, each role adds relevant information to the track trace link.By aggregating these information,it can provide some powerful support to user.      
+About the Apache RocketMQ project,I will add the feature of message track trace which can help users query every complete link data of a message exactly.This funcation is important to RocketMQ,especially in some  financial application fields.     
     
 # Goals
 ##  What problem is this proposal designed to solve?
-    Reliability and Availability is the most two important characters for each MQ system.Although RocketMQ does very well in the two fields,it need some other methods to make sure the complete link of a message is no problem.By some ways,we should view the complete link of a messag and find the root cause of failure in process messaging quickly.        
-    So,if RocketMQ support the feature of Message Track Trace,we can find and analyse the root cause of failure in process messaging easily.And we can query many parameter values,such as sending cost time,consumption cost time,store time in broker and so on.The architecture of Message Track Trace will be introduced in below chapter.
+Reliability and Availability is the most two important characters for each MQ system.Although RocketMQ does very well in the two fields,it need some other methods to make sure the complete link of a message is no problem.By some ways,we should view the complete link of a messag and find the root cause of failure in process messaging quickly.        
+So,if RocketMQ support the feature of Message Track Trace,we can find and analyse the root cause of failure in process messaging easily.And we can query many parameter values,such as sending cost time,consumption cost time,store time in broker and so on.The architecture of Message Track Trace will be introduced in below chapter.
 
 # Non-Goals
 ## What problem is this proposal NOT designed to solve?
-          Every users who build application by using RocketMQ may lack of a efficient way to  find and analyse the root cause of failure in process messaging easily and quickly.The users may spend much more time and enery on operation of RocketMQ in production enviroment.           
+Every users who build application by using RocketMQ may lack of a efficient way to  find and analyse the root cause of failure in process messaging easily and quickly.The users may spend much more time and enery on operation of RocketMQ in production enviroment.           
 ## Are there any limits of this proposal?  
 In order to reduce the impact of message entity content storage in RocketMQ，we redefine a special broker which stores every message track trace.So,if user don't want to use this funcation,he can close it in client by setting a flag.       
 # Changes
