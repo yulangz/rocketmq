@@ -16,7 +16,7 @@ No
 
 # Why should we do that
 ## Are there any problems of our current project?
-Yes, In our testing environment, some feture will be test in the same time, some of consumer instance will deploy in the different test environment for test different feture, but message will be consumed not our expect consumer instance.
+Yes, In our testing environment, we need test different feture in the same time, so we need deploy different consumer logic instance in the different test environment for test different feture, but message will be consumed not our expect consumer instance.
 ## What can we benefit proposed changes?
 Improve consumer in same Consumer Group Name to support different RACK, producer can specify message RACK when send message.
 
