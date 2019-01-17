@@ -12,12 +12,14 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 
 4. Please update the RIP wiki page, and the index below, to reflect the current stage of the RIP after a vote. This acts as the permanent record indicating the result of the RIP (e.g., Accepted or Rejected). Also, report the result of the RIP vote to the voting thread on the mailing list so the conclusion is clear.
 
-### EN
-* RIP-1 Accepted Inactive [RocketMQ MQTT Bridge](https://github.com/apache/rocketmq/wiki/RIP-1-MQTT-Bridge)
-* RIP-2 Accepted Release [RocketMQ Spring](https://github.com/apache/rocketmq/wiki/RIP-2-RocketMQ-Spring)
-* RIP-3 Accepted Release [RocketMQ Python Client](https://github.com/apache/rocketmq/wiki/RIP-3-RocketMQ-Python-Client)
-* RIP-4 Accepted Release [RocketMQ Go Client](https://github.com/apache/rocketmq/wiki/RIP-4-RocketMQ-Go-Client)
-* RIP-5 Accepted Release [RocketMQ Message Trace](https://github.com/apache/rocketmq/wiki/RIP-6-Message-Trace)
-* RIP-7 Discussing Inactive [Multiple Directories Storage Support](https://github.com/apache/rocketmq/wiki/RIP-7-Multiple-Directories-Storage-Support)
-### CN
-* RIP-6 Accepted [RocketMQ ACL](https://github.com/apache/rocketmq/wiki/RIP-5-RocketMQ-ACL)
+### RIP List
+
+| RIP Number |Description| Accepted | Activity |Release|
+| ------ | ------ | ------ |------ |------ |
+| RIP-1|[RocketMQ MQTT Bridge](https://github.com/apache/rocketmq/wiki/RIP-1-MQTT-Bridge)| yes| inactive | no |
+| RIP-2 |[RocketMQ Spring](https://github.com/apache/rocketmq/wiki/RIP-2-RocketMQ-Spring) | yes|active|yes|
+| RIP-3 |[RocketMQ Python Client](https://github.com/apache/rocketmq/wiki/RIP-3-RocketMQ-Python-Client) | yes|active|yes|
+| RIP-4 | [RocketMQ Go Client](https://github.com/apache/rocketmq/wiki/RIP-4-RocketMQ-Go-Client)|yes |active|yes|
+| RIP-5 | [RocketMQ Message Tracing](https://github.com/apache/rocketmq/wiki/RIP-6-Message-Trace)|yes|active|no|
+| RIP-6 | [RocketMQ ACL](https://github.com/apache/rocketmq/wiki/RIP-5-RocketMQ-ACL)| yes|active|no|
+| RIP-7 |[Multiple Directories Storage Support](https://github.com/apache/rocketmq/wiki/RIP-7-Multiple-Directories-Storage-Support) |yes |inactive|no|
