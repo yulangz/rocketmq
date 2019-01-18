@@ -1,6 +1,6 @@
 
 # Status
-Current State: implemented      
+Current State: Implemented      
 Authors: qingfeng(wlliqipeng),dinglei    
 Shepherds: zhengdong   
 Mailing List discussion: users@rocketmq.apache.org;dev@rocketmq.apache.org     
