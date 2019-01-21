@@ -1,5 +1,5 @@
 # Status
-Current State: Voting   
+Current State: Implementing   
 Authors: wlliqipeng   
 Shepherds: ShannonDing(dinglei@apache.org)     
 Mailing List discussion: users@rocketmq.apache.org;dev@rocketmq.apache.org   
