@@ -20,6 +20,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-2 |[RocketMQ Spring](https://github.com/apache/rocketmq/wiki/RIP-2-RocketMQ-Spring) | yes|active|yes|
 | RIP-3 |[RocketMQ Python Client](https://github.com/apache/rocketmq/wiki/RIP-3-RocketMQ-Python-Client) | yes|active|yes|
 | RIP-4 | [RocketMQ Go Client](https://github.com/apache/rocketmq/wiki/RIP-4-RocketMQ-Go-Client)|yes |active|yes|
-| RIP-5 | [RocketMQ Message Tracing](https://github.com/apache/rocketmq/wiki/RIP-6-Message-Trace)|yes|active|no|
-| RIP-6 | [RocketMQ ACL](https://github.com/apache/rocketmq/wiki/RIP-5-RocketMQ-ACL)| yes|active|no|
+| RIP-5 | [RocketMQ Message Tracing](https://github.com/apache/rocketmq/wiki/RIP-6-Message-Trace)|yes|active|yes|
+| RIP-6 | [RocketMQ ACL](https://github.com/apache/rocketmq/wiki/RIP-5-RocketMQ-ACL)| yes|active|yes|
 | RIP-7 |[Multiple Directories Storage Support](https://github.com/apache/rocketmq/wiki/RIP-7-Multiple-Directories-Storage-Support) |yes |inactive|no|
+| RIP-9 |[RocketMQ Develop Guide](https://github.com/apache/rocketmq/wiki/RIP-9-RocketMQ-Developer-Guide) |yes |active|no|
