@@ -18,7 +18,7 @@ Give developers a better understanding of the architecture and principles of Roc
 Introduce RocketMQ best practices to developers.
 
 # Non-Goals
-Are there any limits to this proposal?
+## Are there any limits to this proposal?
 Developer's Guide only supports Chinese and English
 
 # Changes
