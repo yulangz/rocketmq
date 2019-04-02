@@ -5,7 +5,7 @@ Authors: HuZongTang, WangShaoJie
 Shepherds: DuHeng 
 Mailing List discussion: users@rocketmq.apache.org;dev@rocketmq.apache.org 
 Pull Request: 
-Released: <5.0.0> 
+Released: <5.0.0>  
 
 # Background & Motivation
 ## What do we need to do
