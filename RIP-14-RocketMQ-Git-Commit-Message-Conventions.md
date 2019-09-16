@@ -4,7 +4,7 @@ Current State: Discuss
       
 Authors: duhengforever  
   
-Shepherds: vongosling, shannonDing
+Shepherds: vongosling, ShannonDing
 
 Mailing List discussion: users@rocketmq.apache.org; dev@rocketmq.apache.org     
 
@@ -151,9 +151,9 @@ Examples
 
 This change simplifies the streaming usage of the pull consumer. 
 
-> fix(rpc): polish 'No route info of this topic' exception
+> refactor(*): polish 'No route info of this topic' exception
 
-This PR polish exception of 'no route info of this topic'. It will throw more specific exceptions to users. For example, due to network problems, the route data fails to be obtained, and the wrapped remotingXXXXXException is directly thrown to users and users can locate the problem according to exception chaining.
+This PR will throw more specific exceptions to users. For example, due to network problems, the route data fails to be obtained, and the wrapped remotingXXXXXException is directly thrown to users and users can locate the problem according to exception chaining.
 
 Closes #504
 
