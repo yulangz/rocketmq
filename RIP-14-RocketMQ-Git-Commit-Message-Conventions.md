@@ -2,7 +2,7 @@ Status
 -----------------
 Current State: Discuss      
 Authors: duhengforever    
-Shepherds: vongosling
+Shepherds: vongosling,hannonDing
 Mailing List discussion: users@rocketmq.apache.org; dev@rocketmq.apache.org     
 
 Table of Contents
@@ -139,7 +139,7 @@ Examples
 -------------
 
 
-> feat(client): simplify pull consumer implementation
+> rip(client): simplify pull consumer implementation
 
   - add assign and seek method
   - add fetchMessageQueues and offsetForTimestamp method
