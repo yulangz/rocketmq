@@ -27,7 +27,31 @@ New features in this release
 
 ### Commits
 
+These are formatting changes (adding/removing spaces/empty lines, indentation), missing semicolons, comments. So when you are looking for some change, you can ignore these commits - no logic change inside this commit.
+
+When bisecting, you can ignore these by:
+> git bisect skip $(git rev-list --grep irrelevant <good place> HEAD)
+
+
 ### History
+
+This would add kinda “context” information.
+Look at these messages (taken from last few RocketMQ’s commits):
+
+`Deprecated related core pull consumer classes`
+
+`Polish lite pull consumer and fix bug (#1402)`
+
+`Polish LitePullConsumer (#1395)`
+
+`Deprecated the DefaulteMQPull consumer (#1387)`
+
+`Polish lite pull consumer (#1381)`
+
+All of these messages try to specify where is the change. But they don’t share any convention... Are you able to guess what’s inside? These messages miss place specification... So maybe something like parts of the code: docs, remoting, storage, log, …
+
+I know, you can find this information by checking which files had been changed, but that’s slow. 
+
 
 Format of the commit message
 -------------
