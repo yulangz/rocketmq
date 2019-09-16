@@ -11,7 +11,5 @@
     * [[Website Guide|website-guide]]
   * RIP
     * [[RocketMQ Improvement Proposal|RocketMQ-Improvement-Proposal]]
-    * [[Label an Issue|Label-an-Issue]]
-    * [[Website Guide|website-guide]]
   * Release Notes
   * Community
