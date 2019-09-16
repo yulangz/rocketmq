@@ -36,7 +36,7 @@ Bug fixes in this release
 > git log <last release> HEAD --grep fix
 
 New features in this release
-> git log <last release> HEAD --grep rip
+> git log <last release> HEAD --grep feat
 
 
 ### Recognizing unimportant commits
@@ -96,7 +96,7 @@ The message header is a single line that contains a succinct description of the 
 #### Allowed type
 This describes the kind of change that this commit is providing.
 
-`rip(feature)`
+`feat(feature)`
 
 `fix(bug)`
 
