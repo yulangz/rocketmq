@@ -17,6 +17,8 @@ Table of Contents
 -   [Format of the commit message](#format)
     -   [Revert](#revert)
     -   [Message header](#message-header)
+    -   [Message body](#message-body)
+    -   [Message footer](#message-footer)
 -   [Examples](#examples)
 
 Goals
