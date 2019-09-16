@@ -2,7 +2,7 @@ Status
 -----------------
 Current State: Discuss      
 Authors: duhengforever    
-Shepherds: vongosling.  
+Shepherds: vongosling
 Mailing List discussion: users@rocketmq.apache.org; dev@rocketmq.apache.org     
 
 Table of Contents
