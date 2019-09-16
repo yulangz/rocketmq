@@ -1,7 +1,6 @@
   * Home
   * User Guide
     * [[FAQ|FAQ]]
-  * Developer Guide
   * Contributor Guide
     * [[New Contributor Guide|New-contributor-guide]]
     * [[Test Coverage Guide|Test-coverage-guide]]
