@@ -20,8 +20,11 @@ Of course, you can edit this change log before the actual release, but it could 
 List of all subjects (first lines in commit message) since last release:
 > git log <last tag> HEAD --pretty=format:%s
 
+Bug fixes in this release
+> git log <last release> HEAD --grep fix
+
 New features in this release
-> git log <last release> HEAD --grep ISSUE
+> git log <last release> HEAD --grep rip
 
 
 ### Recognizing unimportant commits
@@ -81,7 +84,7 @@ The message header is a single line that contains a succinct description of the 
 #### Allowed type
 This describes the kind of change that this commit is providing.
 
-`feat(feature)`
+`rip(feature)`
 
 `fix(bug)`
 
@@ -129,4 +132,23 @@ Examples
 -------------
 
 
+> feat(client): simplify pull consumer implementation
 
+  - add assign and seek method
+  - add fetchMessageQueues and offsetForTimestamp method
+
+This change simplifies the streaming usage of the pull consumer. 
+
+> fix(rpc): Polish 'No route info of this topic' exception
+
+This PR polish exception of 'no route info of this topic'. It will throw more specific exceptions to users. For example, due to network problems, the route data fails to be obtained, and the wrapped remotingXXXXXException is directly thrown to users and users can locate the problem according to exception chaining.
+
+Closes #504
+
+> docs(guide): update the developer guide
+
+A couple of typos fixed:
+- indentation
+- transaction -> transactional
+- start periodic checking
+- missing brace
