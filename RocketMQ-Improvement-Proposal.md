@@ -26,3 +26,4 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-8 |[Consumer RACK Support](https://github.com/apache/rocketmq/wiki/RIP-8-Consumer-RACK-Support) |yes |inactive|no|
 | RIP-9 |[RocketMQ Develop Guide](https://github.com/apache/rocketmq/wiki/RIP-9-RocketMQ-Developer-Guide) |yes |active|no|
 | RIP-10 |[RocketMQ Unit Test](https://github.com/apache/rocketmq/wiki/RIP-10-RocketMQ-Unit-Test) |no |active|no|
+| RIP-11 |[Evolution of The Next Decade Architecture for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-11-Evolution-of-The-Next-Decade-Architecture-for-RocketMQ) |yes |active|no|
