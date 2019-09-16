@@ -29,6 +29,6 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-11 |[Evolution of The Next Decade Architecture for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-11-Evolution-of-The-Next-Decade-Architecture-for-RocketMQ) |yes |active|no|
 | RIP-12 |[RocketMQ Replicator](https://github.com/apache/rocketmq/wiki/RIP-12-Message-Connector) |yes |active|no|
 | RIP-13 |[RocketMQ Console Project](https://github.com/apache/rocketmq/wiki/RIP-13-RocketMQ-Console-Project) |yes |active|no|
-| RIP-14 |[RocketMQ Git Commit Message Conventions](https://github.com/apache/rocketmq/wiki/RIP-14-RocketMQ-Git-Commit-Message-Conventions) |yes |active|no|
+| RIP-14 |[RocketMQ Git Commit Message Conventions](https://github.com/apache/rocketmq/wiki/RIP-14-RocketMQ-Git-Commit-Message-Conventions) |discussing |active|no|
 | RIP-15 |[RIP 15 RocketMQ IPv6 Support Project](https://github.com/apache/rocketmq/wiki/RIP-15-RocketMQ-IPv6-Support-Project) |yes |active|no|
 | RIP-16 |[RIP 16 RocketMQ RPC(Request-Response model) Support](https://github.com/apache/rocketmq/wiki/RIP-16-RocketMQ-RPC(Request-Response-model)-Support) |yes |active|no|
