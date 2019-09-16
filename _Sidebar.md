@@ -7,7 +7,7 @@
     * [[Mailing list subscription guide|Mailing-list-subscription-guide]]
   * Committer Guide
     * [[New Committer Guide|New-Committer-Guide]]
-    * [[Label an Issue|Label-an-Issue]]
+    * [[Label an Issue/PR|Label-an-Issue]]
     * [[Website Guide|website-guide]]
   * RIP
     * [[RocketMQ Improvement Proposal|RocketMQ-Improvement-Proposal]]
