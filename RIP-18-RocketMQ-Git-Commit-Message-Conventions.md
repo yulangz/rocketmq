@@ -22,7 +22,7 @@ List of all subjects (first lines in commit message) since last release:
 > git log <last tag> HEAD --pretty=format:%s
 
 New features in this release
-> git log <last release> HEAD --grep feature
+> git log <last release> HEAD --grep ISSUE
 
 
 ### Commits
