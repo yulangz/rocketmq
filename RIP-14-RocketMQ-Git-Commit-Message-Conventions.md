@@ -132,20 +132,20 @@ Examples
 -------------
 
 
-> feat(client): simplify pull consumer implementation
+> rip(client): simplify pull consumer implementation
 
   - add assign and seek method
   - add fetchMessageQueues and offsetForTimestamp method
 
 This change simplifies the streaming usage of the pull consumer. 
 
-> fix(rpc): Polish 'No route info of this topic' exception
+> fix: polish 'No route info of this topic' exception
 
 This PR polish exception of 'no route info of this topic'. It will throw more specific exceptions to users. For example, due to network problems, the route data fails to be obtained, and the wrapped remotingXXXXXException is directly thrown to users and users can locate the problem according to exception chaining.
 
 Closes #504
 
-> docs(guide): update the developer guide
+> docs: update the developer guide
 
 A couple of typos fixed:
 - indentation
