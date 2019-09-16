@@ -144,7 +144,7 @@ Examples
 -------------
 
 
-> rip(client): simplify pull consumer implementation
+> feat(client): simplify pull consumer implementation
 
   - add assign and seek method
   - add fetchMessageQueues and offsetForTimestamp method
