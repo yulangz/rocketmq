@@ -24,8 +24,8 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-6 | [RocketMQ ACL](https://github.com/apache/rocketmq/wiki/RIP-5-RocketMQ-ACL)| yes|active|yes|
 | RIP-7 |[Multiple Directories Storage Support](https://github.com/apache/rocketmq/wiki/RIP-7-Multiple-Directories-Storage-Support) |no |inactive|no|
 | RIP-8 |[Consumer RACK Support](https://github.com/apache/rocketmq/wiki/RIP-8-Consumer-RACK-Support) |yes |inactive|no|
-| RIP-9 |[RocketMQ Develop Guide](https://github.com/apache/rocketmq/wiki/RIP-9-RocketMQ-Developer-Guide) |yes |active|no|
-| RIP-10 |[RocketMQ Unit Test](https://github.com/apache/rocketmq/wiki/RIP-10-RocketMQ-Unit-Test) |no |active|no|
+| RIP-9 |[RocketMQ Develop Guide](https://github.com/apache/rocketmq/wiki/RIP-9-RocketMQ-Developer-Guide) |yes |active|yes|
+| RIP-10 |[RocketMQ Unit Test](https://github.com/apache/rocketmq/wiki/RIP-10-RocketMQ-Unit-Test) |yes |active|yes|
 | RIP-11 |[Evolution of The Next Decade Architecture for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-11-Evolution-of-The-Next-Decade-Architecture-for-RocketMQ) |yes |active|no|
 | RIP-12 |[RocketMQ Replicator](https://github.com/apache/rocketmq/wiki/RIP-12-Message-Connector) |yes |active|no|
 | RIP-13 |[RocketMQ Console Project](https://github.com/apache/rocketmq/wiki/RIP-13-RocketMQ-Console-Project) |yes |active|no|
