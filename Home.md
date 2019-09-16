@@ -37,7 +37,6 @@ There are four methods to feed NameServer address list to clients:
 * Environment Variable, use `NAMESRV_ADDR`.
 * HTTP Endpoint.
 
-More details about how to find NameServer address please refer to [here](/rocketmq/four-methods-to-feed-name-server-address-list/).
 
 # Broker Server
 
