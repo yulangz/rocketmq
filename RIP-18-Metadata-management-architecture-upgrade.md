@@ -117,12 +117,15 @@ Broker interactions: The interaction with the old Broker remains backward compat
 ## Compatibility, Deprecation, and Migration Plan
 
 - Are backward and forward compatibility taken into consideration?
+
 The consistency metadata store (nameserver) in this proposal remains backward compatible. The old client and broker can still connect to the new nameserver, but for a good experience, it is recommended to upgrade to the new client and broker.
 
 - Are there deprecated APIs?
+
 Nothing.
 
 - How do we do migration?
+
 This proposal cannot replace the nameserver during operation, so the old cluster needs to be shut down to switch new nameservers.
 
 # Rejected Alternatives 
