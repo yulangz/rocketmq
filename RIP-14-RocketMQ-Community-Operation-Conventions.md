@@ -140,7 +140,7 @@ ISSUE Label Conventions
 
 Each issue needs to be labeled. Generally, an issue needs to have two types of labels, including
 
-Type
+**Type**
 - new feature
 - bug
 - enhancement
@@ -152,7 +152,8 @@ Type
 - discuss
 - wontfix
 - duplicate
-Module
+
+**Module**
 - remoting
 - admin
 - broker
