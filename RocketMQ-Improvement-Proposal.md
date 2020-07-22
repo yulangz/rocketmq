@@ -30,7 +30,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-12 |[RocketMQ Replicator](https://github.com/apache/rocketmq/wiki/RIP-12-Message-Connector) |yes |active|no|
 | RIP-13 |[RocketMQ Console Project](https://github.com/apache/rocketmq/wiki/RIP-13-RocketMQ-Console-Project) |yes |active|no|
 | RIP-14 |[RocketMQ Community Operation Conventions](https://github.com/apache/rocketmq/wiki/RIP-14-RocketMQ-Community-Operation-Conventions) |discussing |active|no|
-| RIP-15 |[RocketMQ IPv6 Support Project](https://github.com/apache/rocketmq/wiki/RIP-15-RocketMQ-IPv6-Support-Project) |yes |active|no|
-| RIP-16 |[RocketMQ RPC(Request-Response model) Support](https://github.com/apache/rocketmq/wiki/RIP-16-RocketMQ-RPC(Request-Response-model)-Support) |yes |active|no|
+| RIP-15 |[RocketMQ IPv6 Support Project](https://github.com/apache/rocketmq/wiki/RIP-15-RocketMQ-IPv6-Support-Project) |yes |active|yes|
+| RIP-16 |[RocketMQ RPC(Request-Response model) Support](https://github.com/apache/rocketmq/wiki/RIP-16-RocketMQ-RPC(Request-Response-model)-Support) |yes |active|yes|
 | RIP-17 |[RocketMQ HTTP Proxy Support](https://github.com/apache/rocketmq/wiki/RIP-17-RocketMQ-HTTP-Proxy-Support) |yes |active|no|
 | RIP-18 |[Metadata management architecture upgrade](https://github.com/apache/rocketmq/wiki/RIP-18-Metadata-management-architecture-upgrade) |discussing |active|no|
