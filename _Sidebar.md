@@ -10,6 +10,6 @@
     * [[Label an Issue/PR|Label-an-Issue]]
     * [[Website Guide|website-guide]]
   * RocketMQ Improvement Proposal
-    * [[RocketMQ Improvement Proposal|RocketMQ-Improvement-Proposal]]
+    * [[RIP|RocketMQ-Improvement-Proposal]]
   * Release Notes
   * Community
