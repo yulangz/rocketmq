@@ -12,4 +12,4 @@
   * RocketMQ Improvement Proposal
     * [[RIP|RocketMQ-Improvement-Proposal]]
   * Community
-    * [Release Policy][Release-and-Lifetime-Support-Policy]
+    * [[Release Policy|Release-and-Lifetime-Support-Policy]]
