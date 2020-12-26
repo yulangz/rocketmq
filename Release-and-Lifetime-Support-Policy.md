@@ -22,7 +22,7 @@ Given 4 releases a year and the fact that no one upgrades four times a year, we 
 As usual, a committer shall volunteer. If no committer volunteers, we'll cancel a release due to lack of interest.
 
 ## Schedule
-The proposed schedule is shown below. We will do a release from March 2020. We will follow a 4 monthly schedule for Apache RocketMQ releases.
+We will do a release from March 2020, followlling a 4 monthly schedule for Apache RocketMQ releases.
 
 
 [1] https://www.oracle.com/java/technologies/java-se-support-roadmap.html
