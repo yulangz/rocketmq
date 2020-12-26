@@ -11,5 +11,5 @@
     * [[Website Guide|website-guide]]
   * RocketMQ Improvement Proposal
     * [[RIP|RocketMQ-Improvement-Proposal]]
-  * Release Notes
   * Community
+    * [Release Policy][Release-and-Lifetime-Support-Policy]
