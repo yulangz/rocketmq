@@ -9,7 +9,7 @@
     * [[New Committer Guide|New-Committer-Guide]]
     * [[Label an Issue/PR|Label-an-Issue]]
     * [[Website Guide|website-guide]]
-  * RIP
+  * RocketMQ Improvement Proposal
     * [[RocketMQ Improvement Proposal|RocketMQ-Improvement-Proposal]]
   * Release Notes
   * Community
