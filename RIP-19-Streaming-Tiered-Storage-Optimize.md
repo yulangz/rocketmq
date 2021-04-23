@@ -51,7 +51,7 @@ Nothing specific.
 New architecture graph: 
 
 
-![Architecture](https://codimd.s3.shivering-isles.com/demo/uploads/upload_dd960a30ebdbc1afc85815b46041740c.png)
+![Architecture](https://z3.ax1x.com/2021/04/23/cOJk5R.png)
 
 
 
