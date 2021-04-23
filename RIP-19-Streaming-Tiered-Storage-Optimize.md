@@ -12,7 +12,9 @@ Pull Request: #PR_NUMBER
 
 Released: <released_version>   
 
-Correlations: RIP-18 Metadata management architecture upgrade，[Thought of The Evolution of The Next Decade Architecture for RocketMQ](https://lists.apache.org/thread.html/83a0411c25868a3bc8acf949c8489604a02b76498ded0219959b7912%40%3Cdev.rocketmq.apache.org%3E)
+Correlations: [RIP-18 Metadata management architecture upgrade](https://github.com/apache/rocketmq/wiki/RIP-18-Metadata-management-architecture-upgrade)，[RIP-11 Evolution of The Next Decade Architecture for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-11-Evolution-of-The-Next-Decade-Architecture-for-RocketMQ)
+
+[Thought of The Evolution of The Next Decade Architecture for RocketMQ](https://lists.apache.org/thread.html/83a0411c25868a3bc8acf949c8489604a02b76498ded0219959b7912%40%3Cdev.rocketmq.apache.org%3E)
 
 # Background & Motivation
 
