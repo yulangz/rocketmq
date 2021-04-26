@@ -34,4 +34,4 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-16 |[RocketMQ RPC(Request-Response model) Support](https://github.com/apache/rocketmq/wiki/RIP-16-RocketMQ-RPC(Request-Response-model)-Support) |yes |active|yes|
 | RIP-17 |[RocketMQ HTTP Proxy Support](https://github.com/apache/rocketmq/wiki/RIP-17-RocketMQ-HTTP-Proxy-Support) |yes |active|no|
 | RIP-18 |[Metadata management architecture upgrade](https://github.com/apache/rocketmq/wiki/RIP-18-Metadata-management-architecture-upgrade) |yes|active|no|
-| RIP-20 |[Streaming Tiered Storage Optimize](https://github.com/apache/rocketmq/wiki/RIP-20-Streaming-Tiered-Storage-Optimize) |discuss|active|no|
+| RIP-20 |[Streaming Tiered Storage Optimize](https://github.com/apache/rocketmq/wiki/RIP-20-Streaming-Tiered-Storage-Optimize) |yes|active|no|
