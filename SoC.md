@@ -21,6 +21,7 @@
 #### 项目产出要求
 
 * 完成基于RocketMQ的PubSub实现
+* 完成binding的实现
 * 完成Component的提交
 
 #### 项目技术要求
