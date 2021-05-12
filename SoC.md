@@ -1,3 +1,1 @@
-# SoC
-
 ## RocketMQ Flink Connector
