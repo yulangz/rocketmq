@@ -5,8 +5,8 @@
 
 #### 项目产出要求
 
-* 完成基于 FLIP-143: Unified Sink API 实现 RocketMQ Connector 的 DataStream Sink
-* 完成基于 FLIP-143: Unified Sink API 实现 RocketMQ Connector 的 Table Sink
+* 完成基于 [FLIP-143](https://cwiki.apache.org/confluence/display/FLINK/FLIP-143%3A+Unified+Sink+API): Unified Sink API 实现 RocketMQ Connector 的 DataStream Sink
+* 完成基于 [FLIP-143](https://cwiki.apache.org/confluence/display/FLINK/FLIP-143%3A+Unified+Sink+API): Unified Sink API 实现 RocketMQ Connector 的 Table Sink
 
 #### 项目技术要求
 
