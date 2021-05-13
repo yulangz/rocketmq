@@ -1,7 +1,7 @@
 ---
 ### 题目一
 #### 名称
-基于 Flink 实现 RocketMQ Connector 的 Sink
+基于 Flink 实现 RocketMQ Sink Connector
 
 #### 项目产出要求
 
