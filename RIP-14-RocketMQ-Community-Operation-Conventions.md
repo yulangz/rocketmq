@@ -79,13 +79,13 @@ Commit message format: <type>(<scope>): <body>
 
 This describes the kind of change that this commit is providing.
 
-feat(feature)
-fix(bug)
-docs(documentation)
-style(formatting, missing semicolons, …)
-refactor(function)
-test(adding missing tests)
-chore(maintain)
+**feat(feature)**
+**fix(bug)**
+**docs(documentation)**
+**style(formatting, missing semicolons, …)**
+**refactor(function)**
+**test(adding missing tests)**
+**chore(maintain)**
  
 **Scope**
 
