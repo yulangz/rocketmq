@@ -109,6 +109,7 @@ Pull requests naming format: [ISSUE #{issue number}] body
 For example
 
 [ISSUE #2085] Support graceful shutdown for push consumer
+
 [ISSUE #1879] GroupTransferService may be blocked by ResponseCallback in SYNC_MASTER mode
 It should be noted that there is a space between ISSUE and issue’s digital number. There must also be a space between the square brackets and the body. The first letter of the body is capitalized.
 
@@ -118,18 +119,23 @@ The pull request of the enhancement, test, code style, document, new feature sho
 
 For example
 [ISSUE #2088] Optimize RocketMQ client's stats of RT to make sense.
+
 [ISSUE #2007] Upgrade fastjson version to prevent serious security problem.
+
 [ISSUE #1976] Improve the security of the system topic operation.
+
 [ISSUE #1689] Add interfaces to remove unused statsItem in BrokerStatsManager class.
 
 The pull request of the bug type should directly describe the content of the bug and avoid writing long sentences.
 
 Counter-example:
 [ISSUE #1901] Fix the issue that create reply message fail when using request/reply mode.
+
 [ISSUE #1906] Fix the issue that booleanConstantExpression might lead to class loading deadlock.
 
 Correct example:
 [ISSUE #1901] Create reply message fail when using request/reply mode.
+
 [ISSUE #1906] The booleanConstantExpression might lead to class loading deadlock.
 
 ## Committer Operation Conventions
