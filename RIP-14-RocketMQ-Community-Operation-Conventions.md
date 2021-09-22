@@ -106,6 +106,7 @@ No dot (.) at the end
 Unified pull request naming format
 
 Pull requests naming format: [ISSUE #{issue number}] body
+
 For example
 
 [ISSUE #2085] Support graceful shutdown for push consumer
@@ -118,6 +119,7 @@ Body content conventions
 The pull request of the enhancement, test, code style, document, new feature should use the Verb-object structure as much as possible.
 
 For example
+
 [ISSUE #2088] Optimize RocketMQ client's stats of RT to make sense.
 
 [ISSUE #2007] Upgrade fastjson version to prevent serious security problem.
@@ -129,11 +131,13 @@ For example
 The pull request of the bug type should directly describe the content of the bug and avoid writing long sentences.
 
 Counter-example:
+
 [ISSUE #1901] Fix the issue that create reply message fail when using request/reply mode.
 
 [ISSUE #1906] Fix the issue that booleanConstantExpression might lead to class loading deadlock.
 
 Correct example:
+
 [ISSUE #1901] Create reply message fail when using request/reply mode.
 
 [ISSUE #1906] The booleanConstantExpression might lead to class loading deadlock.
