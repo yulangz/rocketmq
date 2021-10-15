@@ -2,9 +2,9 @@
 Current State: Proposed     
 Authors: Jason918     
 Shepherds: Zhendong Liu     
-Mailing List discussion: <apache mailing list archive>     
-Pull Request: #PR_NUMBER     
-Released: <relased_version>    
+Mailing List discussion: dev@rocketmq.apache.org    
+Pull Request: #3357    
+Released: 4.9.2   
   
 # Background & Motivation
 ## What do we need to do
