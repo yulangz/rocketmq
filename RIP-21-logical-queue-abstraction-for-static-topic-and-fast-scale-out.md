@@ -24,28 +24,28 @@ Yes. We will introduce new concepts.
 
 
 Why should we do that
-- Are there any problems with our current project?
+- Are there any problems with our current project?  
 Currently, the MessageQueue of RocketMQ is coupled with broker name, which
 results that the queue number will change if broker number increases or
 decreases, which causes all queues to rebalance, which may cause service
 disruption like flink job restarts in minutes.
-- What can we benefit from proposed changes?
-we can get static sharded topic(static topic in short) with fixed queues.
+- What can we benefit from proposed changes?  
+we can get static sharded topic(static topic in short) with fixed queues.  
 The number of logical queues is not related with the number of brokers: We
 can increase broker number without changing logical queue number, moreover,
 we can increase logical queue number without deploying a new broker.
 
 # Goals
-- What problem is this proposal designed to solve?
+- What problem is this proposal designed to solve?  
 Prodive a kind of topic, named as static topic, wich has fixed queues.
-- To what degree should we solve the problem?
+- To what degree should we solve the problem?  
 We should not hurt availability or performance in the implementation.
-# Non-Goals
-- What problem is this proposal NOT designed to solve?
-We will not improve the mechanism of queues rebalance.
-- Are there any limits of this proposal?
-Only newer clients with changes in this proposal will benefit.
-The behavior of ops is different between static topic and dynamic topic.
+# Non-Goals. 
+- What problem is this proposal NOT designed to solve?  
+We will not improve the mechanism of queues rebalance.  
+- Are there any limits of this proposal?  
+Only newer clients with changes in this proposal will benefit.  
+The behavior of ops is different between static topic and dynamic topic.  
 # Changes
 ## Architecture
 
