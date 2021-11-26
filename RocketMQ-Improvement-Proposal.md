@@ -36,6 +36,6 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-18 |[Metadata management architecture upgrade](https://github.com/apache/rocketmq/wiki/RIP-18-Metadata-management-architecture-upgrade) |yes|active|no|
 | RIP-19 |[Server-side rebalance,  lightweight consumer client](https://github.com/apache/rocketmq/wiki/%5BRIP-19%5D-Server-side-rebalance,--lightweight-consumer-client-support) |yes|active|no|
 | RIP-20 |[Streaming Tiered Storage Optimize](https://github.com/apache/rocketmq/wiki/RIP-20-Streaming-Tiered-Storage-Optimize) |yes|active|no|
-| RIP-21 |[Logical Queue Abstraction for Fast Scale-out](https://github.com/apache/rocketmq/wiki/RIP-21-logical-queue-abstraction-for-fast-scale-out) |yes|active|no|
+| RIP-21 |[Logical Queue Abstraction for Static Topic and Fast Scale-out](https://github.com/apache/rocketmq/wiki/RIP-21-logical-queue-abstraction-for-static-topic-and-fast-scale-out) |yes|active|no|
 
 
