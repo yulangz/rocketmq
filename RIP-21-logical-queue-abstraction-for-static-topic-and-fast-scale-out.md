@@ -10,12 +10,12 @@ Below is Markdown text with some GFM syntax.
 
 # Background & Motivation
 What do we need to do
-- Will we add a new module?
+- Will we add a new module?    
 No.
-- Will we add new APIs?
+- Will we add new APIs?    
 Yes. It will add some API for admin tools
 It will add a new constant to mock broker names for logical queues.
-- Will we add a new feature?
+- Will we add a new feature?   
 Yes. We will introduce new concepts
 * physical queue, a shard bound to a specified broker
 * "static sharded topic", "static topic" for short, which has fixed queues, implemented with logic queues
