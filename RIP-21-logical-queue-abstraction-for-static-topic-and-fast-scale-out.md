@@ -17,8 +17,11 @@ Yes. It will add some API for admin tools
 It will add a new constant to mock broker names for logical queues.
 - Will we add a new feature?   
 Yes. We will introduce new concepts
-* physical queue, a shard bound to a specified broker
-* "static sharded topic", "static topic" for short, which has fixed queues, implemented with logic queues
+-- physical message queue, physical queue for short, a shard bound to a specified broker
+-- logic message queue, logic queue for short, a shard vertically composed by physical queues.
+-- dynamic sharded topic, dynamic topic for short, which has queues increasing with the broker numbers.
+-- static sharded topic, static topic for short, which has fixed queues, implemented with logic queues
+
 
 Why should we do that
 - Are there any problems with our current project?
@@ -34,8 +37,7 @@ we can increase logical queue number without deploying a new broker.
 
 # Goals
 - What problem is this proposal designed to solve?
-Provide an abstraction, logical queue, to decouple between queue number and
-broker number.
+Prodive a kind of topic, named as static topic, wich has fixed queues.
 - To what degree should we solve the problem?
 We should not hurt availability or performance in the implementation.
 # Non-Goals
@@ -47,9 +49,10 @@ The behavior of ops is different between static topic and dynamic topic.
 # Changes
 ## Architecture
 
-We use one or more MessageQueue to make one LogicalQueue; One LogicalQueue
-is unique in one topic, and one MessageQueue belongs to one and only one
-LogicalQueue.
+We use one or more physical MessageQueue to make one LogicalQueue with the following principles:
+
+* One LogicalQueue is unique in one topic
+* one physical MessageQueue belongs to one and only one LogicalQueue.
 
 | brokerName | MessageQueue | LogicalQueue |
 |------------|--------------|--------------|
@@ -84,8 +87,8 @@ QueueStatus becomes Expired(neither readable nor writable).
 | broker2    | 1            | 3            | Normal      |
 | broker2    | 2            | 0(101-)      | Normal      |
 
-If this LogicalQueue is migrated back to broker1, it will reuse this
-expired MessageQueue
+If this LogicalQueue is migrated back to broker1, it could reuse this
+expired MessageQueue, but currently we do not reuse it.
 
 | brokerName | MessageQueue | LogicalQueue | QueueStatus |
 |------------|--------------|--------------|-------------|
@@ -141,37 +144,26 @@ broker to spare some producing traffic.
 | **broker3**    | **0**            | **2(201-)**      | **Normal**      |
 | **broker3**    | **1**            | **3(201-)**      | **Normal**      |
 
-All mapping data are stored separately in brokers, and via registerBroker
-to be gathered in namesrv; Each broker only stores its own logical queue
-mapping but not other one's. All management operations should be invoked by
-CLI or direct rpc command, automatic operation support is missing now, and
-require [RIP-18](
-https://github.com/apache/rocketmq/wiki/RIP-18-Metadata-management-architecture-upgrade)
-to be implemented first.
 
 ## Interface Design/Change
 - Method signature changes
 No.
 - Method behavior changes
-When a topic is enabled LogicalQueue support, broker name of MessageQueue
-result returned by some methods like `fetchSubscribeMessageQueues` or
-`fetchPublishMessageQueues` will be a fake one, since LogicalQueue does not
+
+When a static topic is created, it is backed by LogicalQueue, broker name of MessageQueue result returned by some methods like `fetchSubscribeMessageQueues` or `fetchPublishMessageQueues` will be a fake one, since LogicalQueue does not
 have broker name concept.
 - CLI command changes
 Add some operation command for LogicalQueue, like
-`UpdateLogicalQueueMapping` `DeleteLogicalQueueMapping`
-`QueryLogicalQueueMapping` `UpdateLogicalQueueNum` `MigrateLogicalQueue`.
-Also `updateTopic` adds a new parameter to enable LogicalQueue support
-immediately after the topic is created.
+`createStaticTopic` `migrateStaticTopic`.
+
 - Log format or content changes
 No.
 ## Compatibility, Deprecation, and Migration Plan
 - Are backward and forward compatibility taken into consideration?
 Yes.
-- Everything will work well if no topic is enabled LogicalQueue support,
+- Everything will work well if no static topic is created
 whether on old/new broker/namesrv/client.
-- LogicalQueue support will work only under new broker+namesrv+client,
-otherwise, everything will work like no LogicalQueue support.
+- static topic will work only under new broker+namesrv+client,
 - Are there deprecated APIs?
 No.
 - How do we do migration?
