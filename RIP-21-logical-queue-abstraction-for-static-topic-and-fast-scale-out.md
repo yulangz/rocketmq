@@ -2,19 +2,23 @@ Below is Markdown text with some GFM syntax.
 
 # Status
 - Current State: Proposed
-- Authors: [ayanamist](https://github.com/ayanamist)
-- Shepherds: duhengforever@apache.org,vongosling@apache.org
+- Authors: [dongeforever](https://github.com/dongeforever),[ayanamist](https://github.com/ayanamist)
+- Shepherds: duhengforever@apache.org,vongosling@apache.org,dongeforever@apache.org
 - Mailing List discussion: dev@rocketmq.apache.org
 - Pull Request: #PR_NUMBER
 - Released: <relased_version>
+
 # Background & Motivation
 What do we need to do
 - Will we add a new module?
 No.
 - Will we add new APIs?
+Yes. It will add some API for admin tools
 It will add a new constant to mock broker names for logical queues.
 - Will we add a new feature?
-Yes.
+Yes. We will introduce new concepts
+* physical queue, a shard bound to a specified broker
+* "static sharded topic", "static topic" for short, which has fixed queues, implemented with logic queues
 
 Why should we do that
 - Are there any problems with our current project?
@@ -23,9 +27,11 @@ results that the queue number will change if broker number increases or
 decreases, which causes all queues to rebalance, which may cause service
 disruption like flink job restarts in minutes.
 - What can we benefit from proposed changes?
+we can get static sharded topic(static topic in short) with fixed queues.
 The number of logical queues is not related with the number of brokers: We
 can increase broker number without changing logical queue number, moreover,
 we can increase logical queue number without deploying a new broker.
+
 # Goals
 - What problem is this proposal designed to solve?
 Provide an abstraction, logical queue, to decouple between queue number and
@@ -37,6 +43,7 @@ We should not hurt availability or performance in the implementation.
 We will not improve the mechanism of queues rebalance.
 - Are there any limits of this proposal?
 Only newer clients with changes in this proposal will benefit.
+The behavior of ops is different between static topic and dynamic topic.
 # Changes
 ## Architecture
 
