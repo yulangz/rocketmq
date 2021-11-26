@@ -16,11 +16,11 @@ No.
 Yes. It will add some API for admin tools
 It will add a new constant to mock broker names for logical queues.
 - Will we add a new feature?   
-Yes. We will introduce new concepts
--- physical message queue, physical queue for short, a shard bound to a specified broker
--- logic message queue, logic queue for short, a shard vertically composed by physical queues.
--- dynamic sharded topic, dynamic topic for short, which has queues increasing with the broker numbers.
--- static sharded topic, static topic for short, which has fixed queues, implemented with logic queues
+Yes. We will introduce new concepts.   
+-- physical message queue, physical queue for short, a shard bound to a specified broker.   
+-- logic message queue, logic queue for short, a shard vertically composed by physical queues.   
+-- dynamic sharded topic, dynamic topic for short, which has queues increasing with the broker numbers.   
+-- static sharded topic, static topic for short, which has fixed queues, implemented with logic queues.   
 
 
 Why should we do that
