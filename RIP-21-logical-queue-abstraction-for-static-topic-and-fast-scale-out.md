@@ -12,41 +12,41 @@ Below is Markdown text with some GFM syntax.
 # Background & Motivation
 What do we need to do
 - Will we add a new module?    
-No.
+  No.
 - Will we add new APIs?    
-Yes. It will add some API for admin tools
-It will add a new constant to mock broker names for logical queues.
+  Yes. It will add some API for admin tools
+  It will add a new constant to mock broker names for logical queues.
 - Will we add a new feature?   
-Yes. We will introduce new concepts.   
--- physical message queue, physical queue for short, a shard bound to a specified broker.   
--- logic message queue, logic queue for short, a shard vertically composed by physical queues.   
--- dynamic sharded topic, dynamic topic for short, which has queues increasing with the broker numbers.   
--- static sharded topic, static topic for short, which has fixed queues, implemented with logic queues.   
+  Yes. We will introduce new concepts.   
+  -- physical message queue, physical queue for short, a shard bound to a specified broker.   
+  -- logic message queue, logic queue for short, a shard vertically composed by physical queues.   
+  -- dynamic sharded topic, dynamic topic for short, which has queues increasing with the broker numbers.   
+  -- static sharded topic, static topic for short, which has fixed queues, implemented with logic queues.
 
 
 Why should we do that
 - Are there any problems with our current project?  
-Currently, the MessageQueue of RocketMQ is coupled with broker name, which
-results that the queue number will change if broker number increases or
-decreases, which causes all queues to rebalance, which may cause service
-disruption like flink job restarts in minutes.
+  Currently, the MessageQueue of RocketMQ is coupled with broker name, which
+  results that the queue number will change if broker number increases or
+  decreases, which causes all queues to rebalance, which may cause service
+  disruption like flink job restarts in minutes.
 - What can we benefit from proposed changes?  
-we can get static sharded topic(static topic in short) with fixed queues.  
-The number of logical queues is not related with the number of brokers: We
-can increase broker number without changing logical queue number, moreover,
-we can increase logical queue number without deploying a new broker.
+  we can get static sharded topic(static topic in short) with fixed queues.  
+  The number of logical queues is not related with the number of brokers: We
+  can increase broker number without changing logical queue number, moreover,
+  we can increase logical queue number without deploying a new broker.
 
 # Goals
 - What problem is this proposal designed to solve?  
-Prodive a kind of topic, named as static topic, wich has fixed queues.
+  Prodive a kind of topic, named as static topic, wich has fixed queues.
 - To what degree should we solve the problem?  
-We should not hurt availability or performance in the implementation.
-# Non-Goals. 
+  We should not hurt availability or performance in the implementation.
+# Non-Goals.
 - What problem is this proposal NOT designed to solve?  
-We will not improve the mechanism of queues rebalance.  
+  We will not improve the mechanism of queues rebalance.
 - Are there any limits of this proposal?  
-Only newer clients with changes in this proposal will benefit.  
-The behavior of ops is different between static topic and dynamic topic.  
+  Only newer clients with changes in this proposal will benefit.  
+  The behavior of ops is different between static topic and dynamic topic.
 # Changes
 ## Architecture
 
@@ -67,108 +67,106 @@ MessageQueues for one LogicalQueue. We only migrate mapping but not actual
 data, so broker1 is still serving for old data consuming but not data
 producing.
 
-| brokerName | MessageQueue | LogicalQueue | QueueStatus |
-|------------|--------------|--------------|--------------------|
-| **broker1**    | **0**            | **0(0-100)**         | **ReadOnly**
-        |
-| broker1    | 1            | 1            | Normal             |
-| broker2    | 0            | 2            | Normal             |
-| broker2    | 1            | 3            | Normal             |
-| **broker2**    | **2**            | **0(101-)**         | **Normal**
-        |
+| brokerName  | MessageQueue | LogicalQueue | QueueStatus  |
+|-------------|--------------|--------------|--------------|
+| **broker1** | **0**        | **0(0-100)** | **ReadOnly** |
+| broker1     | 1            | 1            | Normal       |
+| broker2     | 0            | 2            | Normal       |
+| broker2     | 1            | 3            | Normal       |
+| **broker2** | **2**        | **0(101-)**  | **Normal**   |
 
 After broker1 cleans all data from the commit log and consume queue,
 QueueStatus becomes Expired(neither readable nor writable).
 
-| brokerName | MessageQueue | LogicalQueue | QueueStatus |
-|------------|--------------|--------------|-------------|
-| **broker1**    | **0**            | **0(-)**         | **Expired**     |
-| broker1    | 1            | 1            | Normal      |
-| broker2    | 0            | 2            | Normal      |
-| broker2    | 1            | 3            | Normal      |
-| broker2    | 2            | 0(101-)      | Normal      |
+| brokerName  | MessageQueue | LogicalQueue | QueueStatus |
+|-------------|--------------|--------------|-------------|
+| **broker1** | **0**        | **0(-)**     | **Expired** |
+| broker1     | 1            | 1            | Normal      |
+| broker2     | 0            | 2            | Normal      |
+| broker2     | 1            | 3            | Normal      |
+| broker2     | 2            | 0(101-)      | Normal      |
 
 If this LogicalQueue is migrated back to broker1, it could reuse this
 expired MessageQueue, but currently we do not reuse it.
 
-| brokerName | MessageQueue | LogicalQueue | QueueStatus |
-|------------|--------------|--------------|-------------|
-| **broker1**    | **0**            | **0(201-)**      | **Normal**      |
-| broker1    | 1            | 1            | Normal      |
-| broker2    | 0            | 2            | Normal      |
-| broker2    | 1            | 3            | Normal      |
-| **broker2**    | **2**            | **0(101-200)**   | **ReadOnly**    |
+| brokerName  | MessageQueue | LogicalQueue   | QueueStatus  |
+|-------------|--------------|----------------|--------------|
+| **broker1** | **0**        | **0(201-)**    | **Normal**   |
+| broker1     | 1            | 1              | Normal       |
+| broker2     | 0            | 2              | Normal       |
+| broker2     | 1            | 3              | Normal       |
+| **broker2** | **2**        | **0(101-200)** | **ReadOnly** |
 
 If this LogicalQueue is migrated back to broker1 while MessageQueue not
 expired, it will create a new MessageQueue
 
-| brokerName | MessageQueue | LogicalQueue | QueueStatus |
-|------------|--------------|--------------|-------------|
-| **broker1**    | **0**            | **0(0-100)**     | **ReadOnly**    |
-| broker1    | 1            | 1            | Normal      |
-| **broker1**    | **2**            | **0(201-)**      | **Normal**      |
-| broker2    | 0            | 2            | Normal      |
-| broker2    | 1            | 3            | Normal      |
-| **broker2**    | **2**            | **0(101-200)**   | **ReadOnly**    |
+| brokerName  | MessageQueue | LogicalQueue   | QueueStatus  |
+|-------------|--------------|----------------|--------------|
+| **broker1** | **0**        | **0(0-100)**   | **ReadOnly** |
+| broker1     | 1            | 1              | Normal       |
+| **broker1** | **2**        | **0(201-)**    | **Normal**   |
+| broker2     | 0            | 2              | Normal       |
+| broker2     | 1            | 3              | Normal       |
+| **broker2** | **2**        | **0(101-200)** | **ReadOnly** |
 
 If broker2 is offlined, all LogicalQueue in this broker should be migrated
 away.
 
-| brokerName | MessageQueue | LogicalQueue | QueueStatus |
-|------------|--------------|--------------|-------------|
-| broker1    | 0            | 0            | Normal      |
-| broker1    | 1            | 1            | Normal      |
-| **broker1**    | **2**            | **2(101-)**      | **Normal**      |
-| **broker1**    | **3**            | **3(101-)**      | **Normal**      |
-| **broker2**    | **0**            | **2(0-100)**     | **ReadOnly**    |
-| **broker2**    | **1**            | **3(0-100)**     | **ReadOnly**    |
+| brokerName  | MessageQueue | LogicalQueue | QueueStatus  |
+|-------------|--------------|--------------|--------------|
+| broker1     | 0            | 0            | Normal       |
+| broker1     | 1            | 1            | Normal       |
+| **broker1** | **2**        | **2(101-)**  | **Normal**   |
+| **broker1** | **3**        | **3(101-)**  | **Normal**   |
+| **broker2** | **0**        | **2(0-100)** | **ReadOnly** |
+| **broker2** | **1**        | **3(0-100)** | **ReadOnly** |
 
 When all data including commit log and consume queue in broker2 are
 cleaned, broker2 can be removed.
 
-| brokerName | MessageQueue | LogicalQueue | QueueStatus |
-|------------|--------------|--------------|-------------|
-| broker1    | 0            | 0            | Normal      |
-| broker1    | 1            | 1            | Normal      |
-| **broker1**    | **2**            | **2(101-)**     | **Normal**      |
-| **broker1**    | **3**            | **3(101-)**      | **Normal**      |
+| brokerName  | MessageQueue | LogicalQueue | QueueStatus |
+|-------------|--------------|--------------|-------------|
+| broker1     | 0            | 0            | Normal      |
+| broker1     | 1            | 1            | Normal      |
+| **broker1** | **2**        | **2(101-)**  | **Normal**  |
+| **broker1** | **3**        | **3(101-)**  | **Normal**  |
 
 When a new broker is deployed, we can migrate some LogicalQueues to this
 broker to spare some producing traffic.
 
-| brokerName | MessageQueue | LogicalQueue | QueueStatus |
-|------------|--------------|--------------|-------------|
-| broker1    | 0            | 0            | Normal      |
-| broker1    | 1            | 1            | Normal      |
-| **broker1**    | **2**            | **2(101-200)**   | **ReadOnly**    |
-| **broker1**    | **3**            | **3(101-200)**   | **ReadOnly**    |
-| **broker3**    | **0**            | **2(201-)**      | **Normal**      |
-| **broker3**    | **1**            | **3(201-)**      | **Normal**      |
+| brokerName  | MessageQueue | LogicalQueue   | QueueStatus  |
+|-------------|--------------|----------------|--------------|
+| broker1     | 0            | 0              | Normal       |
+| broker1     | 1            | 1              | Normal       |
+| **broker1** | **2**        | **2(101-200)** | **ReadOnly** |
+| **broker1** | **3**        | **3(101-200)** | **ReadOnly** |
+| **broker3** | **0**        | **2(201-)**    | **Normal**   |
+| **broker3** | **1**        | **3(201-)**    | **Normal**   |
 
 
 ## Interface Design/Change
 - Method signature changes
-No.
+  No.
 - Method behavior changes
 
 When a static topic is created, it is backed by LogicalQueue, broker name of MessageQueue result returned by some methods like `fetchSubscribeMessageQueues` or `fetchPublishMessageQueues` will be a fake one, since LogicalQueue does not
 have broker name concept.
 - CLI command changes
-Add some operation command for LogicalQueue, like
-`createStaticTopic` `migrateStaticTopic`.
+  Add some operation command for LogicalQueue, like
+  `createStaticTopic` `migrateStaticTopic`.
 
 - Log format or content changes
-No.
+  No.
 ## Compatibility, Deprecation, and Migration Plan
 - Are backward and forward compatibility taken into consideration?
-Yes.
+  Yes.
 - Everything will work well if no static topic is created
-whether on old/new broker/namesrv/client.
+  whether on old/new broker/namesrv/client.
 - static topic will work only under new broker+namesrv+client,
 - Are there deprecated APIs?
-No.
+  No.
 - How do we do migration?
-No need to migrate, this is a feature which needs to be enabled manually.
+  No need to migrate, this is a feature which needs to be enabled manually.
 ## Implementation Outline
 We will implement the proposed changes by 2 phases.
 ### Phase 1 basic function
@@ -180,14 +178,14 @@ We will implement the proposed changes by 2 phases.
 ### Phase 2 compatibility
 1. Implement proxy request+response for old client in broker.
 2. Implement intermediate state(support is partly enabled in some brokers
-but not all) protection in namesrv.
+   but not all) protection in namesrv.
 # Rejected Alternatives
 - How does alternatives solve the issue you proposed?
-Implement a whole new Logical Queue architecture from scratch, this
-absolutely will solve the problem.
+  Implement a whole new Logical Queue architecture from scratch, this
+  absolutely will solve the problem.
 - Pros and Cons of alternatives
-Pros: from-scratch way does not bring anything good.
-Cons: from-scratch way will break existent concept, add much more
-complexity to code and not user-friendly.
+  Pros: from-scratch way does not bring anything good.
+  Cons: from-scratch way will break existent concept, add much more
+  complexity to code and not user-friendly.
 - Why should we reject the above alternatives
-It does no good.
+  It does no good.
