@@ -77,7 +77,11 @@ Chinese version:
 
 - ConsumeQueue Index Item (20 Bytes)
 
+![](https://z3.ax1x.com/2021/10/15/5316ld.png)
+
 - Indexing
+
+![](https://z3.ax1x.com/2021/10/15/531gOI.png)
 
 
 As shown in the figure above, BatchMessage1 will be split into 3 separate sub-messages. Every single sub-message needs to be indexed on consume queue.
@@ -86,7 +90,11 @@ As shown in the figure above, BatchMessage1 will be split into 3 separate sub-me
 
 BatchConsumeQueue Index Item (46 Bytes)
 
+![](https://z3.ax1x.com/2021/10/15/531c6A.png)
+
 Indexing
+
+![](https://z3.ax1x.com/2021/10/15/531Rmt.png)
 
 As shown in the figure above, BatchMessage1 will be treated as a single message, and will be indexed only once.
 
