@@ -22,6 +22,7 @@ Why should we do that
 - What scenarios will be covered in this article?
 
 To increase overall message processing throughput, producer accumulates hundreds of messages into a Batch and send them to the Broker at once. Even if the Batch is sent successfully, consumers cannot read the entire Batch at once due to the speed limitation of building ConsumeQueue for sub-messages. End-to-end compression/uncompression is not supported on BatchMessage.
+
 Chinese version:
 为了提升整体消息处理吞吐，客户端将几百条消息积攒到一个Batch中，一次性发送到Broker。即使Batch发送成功，由于子消息构建ConsumeQueue速度局限性，消费者也不能立刻读取到整个Batch的数据。当前Batch消息构建ConsumeQueue的方式将决定这个消息处理系统没法支持端到端的Batch压缩。
 
@@ -33,6 +34,7 @@ When indexing a BatchMessage, the engine will construct multi indexes for a sing
 When consuming a BatchMessage, the engine will access index multi times for a single batch.
 End-to-end compression/uncompression is not supported on BatchMessage.
 The above problems cause that the throughput cannot be improved and the latency cannot be reduced for batch message processing.
+
 Chinese version:
 当前版本的RocketMQ支持将多个独立的消息攒成一个BatchMessage，再发送给Broker的特性。但是目前的存储引擎在处理BatchMessage时，没有充分利用Batch的特性来减少索引。
 当处理BatchMessage时，引擎会将一个BatchMessage拆成多个独立的子消息。
