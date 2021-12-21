@@ -91,24 +91,33 @@ As shown in the figure above, BatchMessage1 will be treated as a single message,
 
 ## Interface Design/Change
 - Method signature changes
-  Nothing specific.
+
+Nothing specific.
+
 - Method behavior changes
+
   Nothing specific.
+
 - CLI command changes
+
   Nothing specific.
+
 - Log format or content changes
   Nothing specific.
 
 ## Compatibility, Deprecation, and Migration Plan
 - Are backward and forward compatibility taken into consideration?
+  
   Inner-batch: new batch message processing.
   Outer-batch: old batch message processing.
   old client+new broker: old clients won't make request with inner-batch flag, so broker will use old outer-batch manner.
 new client+old broker: new clients will detect whether broker support the inner-batch manner, if not, it will fallback to use old outer-batch manner.
 
 - Are there deprecated APIs?
+  
   No.
 - How do we do migration?
+  
   new instance: migration is not needed.
   old instance: historical consume queue needs to be converted to batch consume queue.
 
