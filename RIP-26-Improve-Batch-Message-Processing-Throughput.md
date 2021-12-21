@@ -92,7 +92,7 @@ As shown in the figure above, BatchMessage1 will be treated as a single message,
 ## Interface Design/Change
 - Method signature changes
 
-Nothing specific.
+  Nothing specific.
 
 - Method behavior changes
 
@@ -130,9 +130,12 @@ Implement historic consume queue and batch consume queue converter.
 
 # Rejected Alternatives
 - How does alternatives solve the issue you proposed?
+  
   Sparse index.
 - Pros and Cons of alternatives
+  
   Pros: space-saving
   Cons: lower throughput
 - Why should we reject the above alternatives
+  
   Starting with 5.0, RocketMQ will focus on streaming, which gives higher priority to throughput.
