@@ -3,7 +3,7 @@
 - Authors: [Erik1288](https://github.com/Erik1288)
 - Shepherds: dongeforever@apache.org
 - Mailing List discussion: dev@rocketmq.apache.org
-- Pull Request: #PR_NUMBER
+- Pull Request: #3671
 - Released: <relased_version>
 - Related Docs: [Improve Batch Message Processing Throughput](https://docs.google.com/document/d/10hlfG6Jg36D8Kid6t8Zuf3g_63pb8yQZqwRqV2GZkEQ/edit)
 
