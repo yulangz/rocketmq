@@ -40,6 +40,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-26 |[Improve Batch Message Processing Throughput](https://github.com/apache/rocketmq/wiki/RIP-26-Improve-Batch-Message-Processing-Throughput) |yes|active|no|
 | RIP-27 |[Auto batching in producer](https://github.com/apache/rocketmq/wiki/RIP-27-Auto-batching-in-producer) |yes|active|no|
 | RIP-28 |[Light message queue (LMQ)](https://github.com/apache/rocketmq/wiki/RIP-28-Light-message-queue-(LMQ)) |yes|active|no|
+| RIP-29 |[Optimize RocketMQ NameServer](https://github.com/apache/rocketmq/wiki/RIP-29-Optimize-RocketMQ-NameServer) |yes|active|no|
 
 
 
