@@ -446,7 +446,7 @@ Phase 1 can be divided into the following steps:
 Phase 1 will be supported in the 5.0 branch first.
 
 ### Phase 2
-To support dledger mode.
+Support dledger mode.
 
 ### Phase 3
 According to the isolation classification of thread pools, make thread pools shared.
