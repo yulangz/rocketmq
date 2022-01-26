@@ -1,5 +1,5 @@
 # Status
-- Current State: Proposed
+- Current State: Merged
 - Authors: [tianliuliu](https://github.com/tianliuliu)
 - Shepherds: RongtongJin
 - Mailing List discussion: dev@rocketmq.apache.org
