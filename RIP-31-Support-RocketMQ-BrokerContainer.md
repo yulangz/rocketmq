@@ -8,7 +8,7 @@
 - Related Docs: [Support RocketMQ BrokerContainer](https://docs.google.com/document/d/1Rnh9QSZSRowHnjMyDr7JKiHc-_uxc4ycSumbtB_iKzg/edit?usp=sharing)
 
 # Background & Motivation
-What do we need to do
+## What do we need to do
 - Will we add a new module?   
  
   Yes, a new container module like "store" and "broker" will be added.
@@ -20,7 +20,7 @@ What do we need to do
   Yes, BrokerContainer is a new feature.
 
 
-Why should we do that
+## Why should we do that
 
 - Are there any problems of our current project?
 
