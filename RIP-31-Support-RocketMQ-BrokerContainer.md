@@ -5,7 +5,7 @@
 - Mailing List discussion: dev@rocketmq.apache.org
 - Pull Request: 
 - Released: <relased_version>
-- Related Docs: [Google_docs](https://docs.google.com/document/d/1Rnh9QSZSRowHnjMyDr7JKiHc-_uxc4ycSumbtB_iKzg/edit?usp=sharing) [中文版](https://shimo.im/docs/xxY3QDqYvj6G6Gk9/)
+- Related Docs: [English](https://docs.google.com/document/d/1Rnh9QSZSRowHnjMyDr7JKiHc-_uxc4ycSumbtB_iKzg/edit?usp=sharing) [中文版](https://shimo.im/docs/xxY3QDqYvj6G6Gk9/)
 
 # Background & Motivation
 ## What do we need to do
