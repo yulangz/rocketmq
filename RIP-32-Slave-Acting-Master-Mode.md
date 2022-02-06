@@ -221,220 +221,201 @@ public static final int NOTIFY_MIN_BROKER_ID_CHANGE = 905;
 public static final int EXCHANGE_BROKER_HA_INFO = 906;
 ```
 
-BrokerContainer Interface Design
+BrokerHeartbeatRequestHeader
 
 ```java
-/**
- * An interface for broker container to hold multiple master and slave brokers.
- */
-public interface IBrokerContainer {
-
-    /**
-     * Start broker container
-     */
-    void start() throws Exception;
-
-    /**
-     * Shutdown broker container and all the brokers inside.
-     */
-    void shutdown();
-
-    /**
-     * Add a broker to this container with specific broker config.
-     *
-     * @param brokerConfig the specified broker config
-     * @param storeConfig the specified store config
-     * @return the added BrokerController or null if the broker already exists
-     * @throws Exception when initialize broker
-     */
-    BrokerController addBroker(BrokerConfig brokerConfig, MessageStoreConfig storeConfig) throws Exception;
-
-   /**
-     * Remove the broker from this container associated with the specific broker identity
-     *
-     * @param brokerIdentity the specific broker identity
-     * @return the removed BrokerController or null if the broker doesn't exists
-     */
-    BrokerController removeBroker(BrokerIdentity brokerIdentity) throws Exception;
-
-    /**
-     * Return the broker controller associated with the specific broker identity
-     *
-     * @param brokerIdentity the specific broker identity
-     * @return the associated messaging broker or null
-     */
-    BrokerController getBroker(BrokerIdentity brokerIdentity);
-
-    /**
-     * Return all the master brokers belong to this container
-     *
-     * @return the master broker list
-     */
-    Collection<BrokerController> getMasterBrokers();
-
-    /**
-     * Return all the slave brokers belong to this container
-     *
-     * @return the slave broker list
-     */
-    Collection<InnerSalveBrokerController> getSlaveBrokers();
-
-   /**
-     * Return all broker controller in this container
-     *
-     * @return all broker controller
-     */
-    List<BrokerController> getBrokerControllers();
-
-    /**
-     * Return the address of broker container.
-     *
-     * @return broker container address.
-     */
-    String getBrokerContainerAddr();
-
-    /**
-     * Peek the first master broker in container.
-     *
-     * @return the first master broker in container
-     */
-    BrokerController peekMasterBroker();
-
-    /**
-     * Return the config of the broker container
-     *
-     * @return the broker container config
-     */
-    BrokerContainerConfig getBrokerContainerConfig();
-
-    /**
-     * Get netty server config.
-     *
-     * @return netty server config
-     */
-    NettyServerConfig getNettyServerConfig();
-
-   /**
-     * Get netty client config.
-     *
-     * @return netty client config
-     */
-    NettyClientConfig getNettyClientConfig();
-
-    /**
-     * Return the shared BrokerOuterAPI
-     *
-     * @return the shared BrokerOuterAPI
-     */
-    BrokerOuterAPI getBrokerOuterAPI();
-
-    /**
-     * Return the shared RemotingServer
-     *
-     * @return the shared RemotingServer
-     */
-    RemotingServer getRemotingServer();
-}
-
-```
-
-Data structure in BrokerContainer
-
-```java
-public class BrokerContainer implements IBrokerContainer {
-    private static final InternalLogger LOG = InternalLoggerFactory.getLogger(LoggerName.BROKER_LOGGER_NAME);
-    private final ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolExecutor(1,
-        new BasicThreadFactory.Builder()
-            .namingPattern("BrokerContainerScheduledThread")
-            .daemon(true)
-            .build());
-    private final NettyServerConfig nettyServerConfig;
-    private final NettyClientConfig nettyClientConfig;
-    private final BrokerOuterAPI brokerOuterAPI;
-    private final ContainerClientHouseKeepingService containerClientHouseKeepingService;
-
-
-    private final ConcurrentMap<BrokerIdentity, InnerSalveBrokerController> slaveBrokerControllers = new ConcurrentHashMap<>();
-    private final ConcurrentMap<BrokerIdentity, InnerBrokerController> masterBrokerControllers = new ConcurrentHashMap<>();
-    private final List<BrokerBootHook> brokerBootHookList = new ArrayList<>();
-    private final BrokerContainerProcessor brokerContainerProcessor;
-    private final Configuration configuration;
-    private final BrokerContainerConfig brokerContainerConfig;
-
-
-    private RemotingServer remotingServer;
-    private RemotingServer fastRemotingServer;
-    private ExecutorService brokerContainerExecutor;
+public class BrokerHeartbeatRequestHeader implements CommandCustomHeader {
+    @CFNotNull
+    private String clusterName;
+    @CFNotNull
+    private String brokerAddr;
+    @CFNotNull
+    private String brokerName;
     ……
 }
 ```
 
-![](https://s4.ax1x.com/2022/01/26/7LQ3GD.png)
+Data structure in BrokerMemberGroup
 
-The BrokerContainer will manage multiple innerBrokerControllers and innerSlaveBrokercontrollers. InnerBrokerController inherits from the brokerController and has the ability to reuse the brokerController. InnerSlaveBrokerController inherits from the innerBrokerController and has the ability to reuse the innerBrokerController, InnerBrokerController and innerSlaveBrokerController in the same BrokerContainer share the transport layer.
-
- 
-The BrokerContainer is configured as follows
 ```java
-public class BrokerContainerConfig {
-
-
-    private String rocketmqHome = System.getProperty(MixAll.ROCKETMQ_HOME_PROPERTY, System.getenv(MixAll.ROCKETMQ_HOME_ENV));
-
-
-    @ImportantField
-    private String namesrvAddr = System.getProperty(MixAll.NAMESRV_ADDR_PROPERTY, System.getenv(MixAll.NAMESRV_ADDR_ENV));
-
-
-    @ImportantField
-    private boolean fetchNamesrvAddrByAddressServer = false;
-
-
-    @ImportantField
-    private String brokerContainerIP = RemotingUtil.getLocalAddress();
-
-
-    private String brokerConfigPaths = null;
-    
+public class BrokerMemberGroup {
+    private String cluster;
+    private String brokerName;
+    private Map<Long/* brokerId */, String/* broker address */> brokerAddrs;
     ……
 }
 ```
+
+GetBrokerMemberGroupRequestHeader
+```java
+public class GetBrokerMemberGroupRequestHeader implements CommandCustomHeader {
+    @CFNotNull
+    private String clusterName;
+
+
+    @CFNotNull
+    private String brokerName;
+    ……
+}
+```
+
+NotifyMinBrokerIdChangeRequestHeader
+```java
+public class NotifyMinBrokerIdChangeRequestHeader implements CommandCustomHeader {
+    @CFNullable
+    private Long minBrokerId;
+
+
+    @CFNullable
+    private String brokerName;
+
+
+    @CFNullable
+    private String minBrokerAddr;
+
+
+    @CFNullable
+    private String offlineBrokerAddr;
+
+
+    @CFNullable
+    private String haBrokerAddr;
+    ……
+}
+```
+
+ExchangeHAInfoRequestHeader
+```java
+public class ExchangeHAInfoRequestHeader implements CommandCustomHeader {
+    @CFNullable
+    public String masterHaAddress;
+
+
+    @CFNullable
+    public Long masterFlushOffset;
+
+
+    @CFNullable
+    public String masterAddress;
+}
+```
+
+ExchangeHAInfoResponseHeader
+```java
+public class ExchangeHAInfoResponseHeader implements CommandCustomHeader {
+    @CFNullable
+    public String masterHaAddress;
+
+
+    @CFNullable
+    public Long masterFlushOffset;
+
+
+    @CFNullable
+    public String masterAddress;
+}
+```
+
+The registerBrokerRequestHeader adds heartbeatTimeOutMillis and enableActingMaster. Heartbeat timeOutMillis indicates the heartbeat timeout time, and enableActingMaster indicates whether the broker starts the slave acting master mode.
+
+```java
+public class RegisterBrokerRequestHeader implements CommandCustomHeader {
+    @CFNotNull
+    private String brokerName;
+    @CFNotNull
+    private String brokerAddr;
+    @CFNotNull
+    private String clusterName;
+    @CFNotNull
+    private String haServerAddr;
+    @CFNotNull
+    private Long brokerId;
+    @CFNullable
+    private Long heartbeatTimeoutMillis;
+    @CFNullable
+    private Boolean enableActingMaster;
+
+
+    private boolean compressed;
+
+
+    private Integer bodyCrc32 = 0;
+    ……
+}
+```
+
+Increase onlyThisBroker field LockBatchRequestBody/UnLockBatchRequestBody, false by default, to complete the qurom locked
+
+LockBatchRequestBody：
+```java
+public class LockBatchRequestBody extends RemotingSerializable {
+    private String consumerGroup;
+    private String clientId;
+    private boolean onlyThisBroker = false;
+    private Set<MessageQueue> mqSet = new HashSet<MessageQueue>();
+	……
+}
+```
+
+UnLockBatchRequestBody
+```java
+public class UnlockBatchRequestBody extends RemotingSerializable {
+    private String consumerGroup;
+    private String clientId;
+    private boolean onlyThisBroker = false;
+    private Set<MessageQueue> mqSet = new HashSet<MessageQueue>();
+    ……
+}
+```
+
+**New Configuration**
+
+Configuration in nameserver：
+
+ - scanNotActiveBrokerInterval: scan not active broker intervals, each scan will determine whether the broker heartbeat timeout, the default 5 s.
+
+ - supportActingMaster: If nameserver supports slave acting master mode, when enabled, the slave with the smallest broker id in the masterless state will be replaced with master (i.e. BrokerId =0) in TopicRoute and serve the client in read-only mode. The default is false.
+
+Configuration in broker：
+
+ - enableSlaveActingMaster: enables the slave acting master in broker. The default value is false.
+
+ - enableRemoteEscape: indicates whether remote escape is allowed. The default value is false.
+
+ - brokerHeartbeatInterval: broker sends heartbeat interval (different from registration interval) to nameserver, default is 1s.
+
+ - brokerNotActiveTimeoutMillis: broker inactive timeout, more than the time namesrv is still not yet received the broker heartbeat, then determine the broker offline, the default 10 s.
+
+ - sendHeartbeatTimeoutMillis: broker sends a heartbeat timeout, default 1 s.
+
+ - lockInStrictMode: specifies whether to use strict mode for consuming order message lock queues on the consumer. The default mode is false.
+
+ - skipPreOnline: the broker skips the pre-online process. The default is false.
+
+ - compatibleWithOldNameSrv: Specifies whether to register the old nameserver in compatibility mode. The default value is true. For details about the compatibility mode, see the following.
 
 - CLI command changes
 
-If the producer and consumer have not modified, the admin tool will add a new command to complete the add broker and remove broker operations on the BrokerContainer.
-
-AddBrokerCommand
-```
-usage: mqadmin addBroker -b <arg> -c <arg> [-h] [-n <arg>]
- -b,--brokerConfigPath <arg>      Broker config path
- -c,--brokerContainerAddr <arg>   Broker container address
- -h,--help                        Print help
- -n,--namesrvAddr <arg>           Name server address list, eg: 192.168.0.1:9876;192.168.0.2:9876
-```
-
-RemoveBroker Command
-```
-usage: mqadmin removeBroker -b <arg> -c <arg> [-h] [-n <arg>]
- -b,--brokerIdentity <arg>        Information to identify a broker: clusterName:brokerName:brokerId
- -c,--brokerContainerAddr <arg>   Broker container address
- -h,--help                        Print help
- -n,--namesrvAddr <arg>           Name server address list, eg: 192.168.0.1:9876;192.168.0.2:9876
-```
+The client code and admin have not changed.
 
 - Log format or content changes
 
-In the BrokerContainer mode and after log separation is enabled, the default output path of the log will change, and the specific path of each broker log will change to
-
-{user.home}/logs/{$brokerCanonicalName}_rocketmqlogs/
- 
-brokerCanonicalName is {BrokerClusterName_BrokerName_BrokerId}.
-
+No
 
 ## Compatibility, Deprecation, and Migration Plan
 - Are backward and forward compatibility taken into consideration?
   
-  Yes, There is no change in the specific functions and APIs of the broker in the BrokerContainer. There is no change in the functions and APIs of the broker when the user starts the broker in the normal way (not in the BrokerContainer way), and there is no change in the interaction between the broker and the client and the nameserver.
+Yes, the RIP-32 takes compatibility into account. RIP-32 involves two components, broker and Nameserver, which are compatible as follows:
+
+New nameserver and old broker: The new Nameserver is fully compatible with the old Broker without compatibility problems.
+
+Old nameserver and new broker: The new broker enables the slaveActingMaster, which sends BROKER_HEARTBEAT and GET_BROKER_MEMBER_GROUP requests to the nameserver, but the older Nameserver cannot handle these requests. Therefore, you need to configure compatibleWithOldNameSrv=true in broker config to enable the old namesrv compatibility mode, in which some of the broker's new RPCs are implemented by reusing the old RequestCode:
+
+1. The new lightweight heartbeat will be implemented by reusing QUERY_DATA_VERSION
+
+2. GetBrokerMemberGroup is implemented by reusing GET_ROUTEINFO_BY_TOPIC by adding rmq_sys_ {brokerName} system topic for each broker, Obtain the survival information of the replica group by obtaining the route of the system topic.
+
+Clients have no compatibility issues with new versions of nameserver and broker.
 
 - Are there deprecated APIs?
   
@@ -442,63 +423,29 @@ brokerCanonicalName is {BrokerClusterName_BrokerName_BrokerId}.
 
 - How do we do migration?
   
-**Scenario 1: Normal upgrade**
+Upgrade normally.
 
-![](https://s4.ax1x.com/2022/01/26/7LQGxH.png)
+In consideration of compatibility, it is recommended to upgrade the nameserver before upgrading the broker.
 
-The goal is to change the original master-slave to the mutual master-slave in the figure above.
-
-Take this broker group offline and upgrade to a new version of the RocketMQ package. Modify the broker container configure file, configure brokerConfigPaths according to the expected master-slave relationship, and complete the specific configuration of the configuration files of the two brokers.
-
-Each broker of the same BrokerContainer needs to have a different port number. If the configuration of the original broker's storePathRootDir and storePathCommitlog changes, data migration is also required. Copy the files in the store directory to the new directory and start the BrokerContainer.
-
-Note: if the original broker has an amount of data, after configuring quotaPercentForDiskPartition and logicalDiskSpaceCleanForciblyThreshold, it will quickly clean up to the logical threshold, which needs to be adjusted dynamically.
-
-**Scenario 2: The node offline and cleanup, replace it to the new version** 
-
-1. Set broker that needs to be upgraded write permission to false, waiting for the data to be completely consumed
-2. Take the broker in step 1 offline and clean up relevant data
-3. Start and join the cluster in BrokerContainer mode.
+If the order is to upgrade the broker first and then the nameserver, the broker needs to make the compatibleWithOldNamesrv config true.
 
 ## Implementation Outline
 
-We will implement the proposed changes by 3 phases.
+We will implement the proposed changes by 2 phases.
+
 ### Phase 1 
 
-Support master-slave mode. 
-
-Phase 1 can be divided into the following steps:
-1. Implementation of transport layer sharing and subRemotingServer
-2. Implement the BrokerContainer module and the admin command
-3. Implement log separation mechanism
-4. Implement clean logic for BrokerContainer
-Phase 1 will be supported in the 5.0 branch first.
+1. Complete all functions on nameserver
+2. Complete all functions on the broker except transaction message escape.
+3. Escape bridge remote delivery is completed by using the built-in producer and consumer.
 
 ### Phase 2
-Support dledger mode.
 
-### Phase 3
-According to the isolation classification of thread pools, make thread pools shared.
+1. Complete the escape of the transaction message.
+2. Escape bridge replaces the built-in producer and consumer, extracts only the necessary APIs, and converges all APIs to the brokerOutAPI.
+
 
 # Rejected Alternatives
 
-## How does alternatives solve the issue you proposed?
-
-Deploy multiple broker processes directly on a single node
-
-## Pros and Cons of alternatives
-
-Pros:
-
-Better isolation between brokers
-
-Cons:
-
-1. When deploying multiple broker processes on a single node, the resources are managed by the operating system, while the brokers in BrokerContainer are managed by the RocketMQ process. RocketMQ can better control each broker, and some resources can also be fully reused such as transport layer, thread pool, etc.
-2. When deploying multiple broker processes on a single node, it cannot provide a unified view for RocketMQ, but the BrokerContainer can provide a unified view to complete the centralized control of brokers. For example, the BrokerContainer can monitor the capacity occupation of every broker and handle them according to the situation.
-3. In order to isolate resources, deploying multiple broker processes on a single node may need to be through docker, but the broker container does not need to install docker. RocketMQ provides the ability of container natively, and the deployment and installation cost is lower.
-4. From the perspective of single process RocketMQ, the resource utilization is improved.
-
-## Why should we reject above alternatives
-
-Based on the comparison of Pros and Cons above, RIP-31 provides BrokerContainer capability. 
+ 
+No other alternatives
