@@ -6,7 +6,7 @@
 - Shepherds: [duhengforever]()
 - Mailing List discussion: [dev@rocketmq.apache.org](mailto:dev@rocketmq.apache.org); [users@rocketmq.apache.org](mailto:users@rocketmq.apache.org)
 - Pull Request: RIP-19
-- Released: - 4.9.0
+- Released: - 5.0.0-PREVIEW
 
 
 
