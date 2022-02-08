@@ -42,6 +42,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-28 |[Light message queue (LMQ)](https://github.com/apache/rocketmq/wiki/RIP-28-Light-message-queue-(LMQ)) |yes|active|no|
 | RIP-29 |[Optimize RocketMQ NameServer](https://github.com/apache/rocketmq/wiki/RIP-29-Optimize-RocketMQ-NameServer) |yes|active|no|
 | RIP-31 |[Support RocketMQ BrokerContainer](https://github.com/apache/rocketmq/wiki/RIP-31-Support-RocketMQ-BrokerContainer) |yes|active|no|
+| RIP-32 |[Slave Acting Master Mode](https://github.com/apache/rocketmq/wiki/RIP-32-Slave-Acting-Master-Mode) |yes|active|no|
 
 
 
