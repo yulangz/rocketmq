@@ -1,5 +1,5 @@
 # Status
-- Current State: Accept
+- Current State: accept
 - Authors: [RongtongJin](https://github.com/RongtongJin)
 - Shepherds: duhengforever@apache.org
 - Mailing List discussion: dev@rocketmq.apache.org
