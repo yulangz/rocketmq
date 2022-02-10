@@ -69,6 +69,17 @@ Using these two parameters, you can flexibly specify the number of copies to be 
 
 As shown in the figure above, in the case of two copies, if inSyncReplicas is 2, the message will be returned to the client only after being copied in both mmaster and slave. In the three-copy case, if inSyncReplicas is 2, the message must be copied to the master and to one slave before it is returned to the client. In the four-copy case, if inSyncReplicas is 3, the message needs to be copied to any two slaves in addition to the master before it is returned to the client. The totalReplicas and inSyncReplicas can be flexibly set to meet the needs of users in various scenarios.
 
+
+Note: 
+
+totalReplicas parameter does not affect the number of replicas that need ack. Its main functions are as follows:
+
+1. In RIP-32, lock quorum (refer to RIP-32) calculates the number of replicas to be locked according to the value of totalReplicas. For example, if totalReplicas = 3, it needs to lock 2 replicas to be successful.
+2. It will be a verification parameter. For example, when totalReplicas = 1, it will only get the local data when calling getMinOffset and getMaxOffset. It will also skip the pre-online process when totalReplicas = 1. 
+
+Therefore, if the real number of replicas is not equal to the configured totalReplicas, the normal replication will not be affected, but lock quorum will not be as expected in the scenario of order message.
+
+
 ### Adaptive Degradation
 
 RIP-34 can perform adaptive synchronous replication degradation. The degradation criteria are as follows
@@ -83,9 +94,9 @@ RIP-34 Adds the following parameters to perform automatic degradation:
 
 **enableAutoInSyncReplicas**: automatic degrade switch. When enableAutoInSyncReplicas is enabled, if the number of synchronized brokers (including the master itself) in the replication group does not meet the threshold specified by inSyncReplicas, minInSyncReplicas is used. The conditions for determining the synchronization status are as follows: slave commitlog The length of the master cannot exceed haSlaveFallBehindMax. The default is false.
 
-**haSlaveFallBehindMax**: specify the judgment value of whether the slave and master are in the in-sync state. If the slave commitLog lag behind the master exceeds this value, the slave is considered to be in the unsynchronized state.. The default value is 256 KB.
+**haMaxGapNotInSync**: specify the judgment value of whether the slave and master are in the in-sync state. If the slave commitLog lag behind the master exceeds this value, the slave is considered to be in the unsynchronized state.. The default value is 256 KB.
 
-Note: In RocketMQ 4.x, haSlaveFallbehindMax exists. The default value is 256MB. In RIP-34, this parameter is removed. It is replaced by haSlaveFallBehindMax.
+Note: In RocketMQ 4.x, haSlaveFallbehindMax exists. The default value is 256MB. In RIP-34, this parameter is removed. 
 
 In RIP-34, the following logic is used to calculate the number of ACK copies required. After receiving sufficient ACK copies, return the success to the client.
 
@@ -118,7 +129,7 @@ No request or method is changed.
 
 Added parameters: totalReplicas, inSyncReplicas, minInSyncReplicas, enableAutoInSyncReplicas, haSlaveFallBehindMax.
 
-Behavior change: In synchronous replication mode, parameters such as totalReplicas and inSyncReplicas need to be specified to confirm the number of copies to be ACK. In Broker Config, the haSlaveFallbehindMax parameter was cancelled and replaced by haSlaveFallbehindMax. The meaning and default values have been changed, as described above.
+Behavior change: In synchronous replication mode, parameters such as totalReplicas and inSyncReplicas need to be specified to confirm the number of copies to be ACK. In Broker Config, the haSlaveFallbehindMax parameter was canceled and replaced by haMaxGapNotInSync. The meaning and default values have been changed, as described above.
 
 - CLI command changes
 
