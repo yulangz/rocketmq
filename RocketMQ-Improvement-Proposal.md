@@ -44,6 +44,8 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-30 |[Support Compaction topic](https://github.com/apache/rocketmq/wiki/RIP-30-Support-Compaction-topic) |yes|active|no|
 | RIP-31 |[Support RocketMQ BrokerContainer](https://github.com/apache/rocketmq/wiki/RIP-31-Support-RocketMQ-BrokerContainer) |yes|active|no|
 | RIP-32 |[Slave Acting Master Mode](https://github.com/apache/rocketmq/wiki/RIP-32-Slave-Acting-Master-Mode) |yes|active|no|
+| RIP-33 |[RocketMQ MQTT](https://github.com/apache/rocketmq/wiki/RIP-33-RocketMQ-MQTT) |yes|active|no|
+| RIP-34 |[Support quorum write and adaptive degradation in master slave architecture](https://github.com/apache/rocketmq/wiki/RIP-34-Support-quorum-write-and-adaptive-degradation-in-master-slave-architecture) |yes|active|no|
 
 
 
