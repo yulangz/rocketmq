@@ -1,5 +1,5 @@
 # Status
-- Current State: Proposed
+- Current State: Accpet
 - Authors: [RongtongJin](https://github.com/RongtongJin)
 - Shepherds: duhengforever@apache.org
 - Mailing List discussion: dev@rocketmq.apache.org
