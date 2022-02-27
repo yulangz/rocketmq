@@ -39,7 +39,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-21 |[Logical Queue Abstraction for Static Topic and Fast Scale-out](https://github.com/apache/rocketmq/wiki/RIP-21-logical-queue-abstraction-for-static-topic-and-fast-scale-out) |yes|active|no|
 | RIP-26 |[Improve Batch Message Processing Throughput](https://github.com/apache/rocketmq/wiki/RIP-26-Improve-Batch-Message-Processing-Throughput) |yes|active|no|
 | RIP-27 |[Auto batching in producer](https://github.com/apache/rocketmq/wiki/RIP-27-Auto-batching-in-producer) |yes|active|no|
-| RIP-28 |[Light message queue (LMQ)](https://github.com/apache/rocketmq/wiki/RIP-28-Light-message-queue-(LMQ)) |yes|active|no|
+| RIP-28 |[Light message queue (LMQ)](https://github.com/apache/rocketmq/wiki/RIP-28-Light-message-queue-(LMQ)) |yes|active|yes|
 | RIP-29 |[Optimize RocketMQ NameServer](https://github.com/apache/rocketmq/wiki/RIP-29-Optimize-RocketMQ-NameServer) |yes|active|no|
 | RIP-30 |[Support Compaction topic](https://github.com/apache/rocketmq/wiki/RIP-30-Support-Compaction-topic) |yes|active|no|
 | RIP-31 |[Support RocketMQ BrokerContainer](https://github.com/apache/rocketmq/wiki/RIP-31-Support-RocketMQ-BrokerContainer) |yes|active|no|
