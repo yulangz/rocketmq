@@ -46,6 +46,9 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-32 |[Slave Acting Master Mode](https://github.com/apache/rocketmq/wiki/RIP-32-Slave-Acting-Master-Mode) |yes|active|no|
 | RIP-33 |[RocketMQ MQTT](https://github.com/apache/rocketmq/wiki/RIP-33-RocketMQ-MQTT) |yes|active|no|
 | RIP-34 |[Support quorum write and adaptive degradation in master slave architecture](https://github.com/apache/rocketmq/wiki/RIP-34-Support-quorum-write-and-adaptive-degradation-in-master-slave-architecture) |yes|active|no|
+| RIP-37 |[New and Unified APIs](https://shimo.im/docs/m5kv92OeRRU8olqX) |yes|active|no|
+| RIP-38 |[RocketMQ EventBridge](https://docs.google.com/document/d/1RWPeORHY_-ukq8qs1a1lH80fH8vSQ44U1R9xbxgEX_c/) |yes|active|no|
+| RIP-39 |[Support gRPC protocol](https://shimo.im/docs/gXqmeEPYgdUw5bqo) |yes|active|no|
 
 
 
