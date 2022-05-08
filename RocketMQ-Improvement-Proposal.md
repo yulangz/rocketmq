@@ -10,7 +10,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 
 3. Once the proposal is finalized and some committers(Shepherd) are willing to support, please call a [VOTE] to have the proposal adopted. These proposals are more serious than code changes and more serious even than release votes. The criteria for acceptance is the lazy majority. The vote should remain open for 72 hours.
 
-4. Please update the RIP wiki page, and the index below, to reflect the current stage[accept, reject, active, inactive, waiting for owner] of the RIP after a vote. This acts as the permanent record indicating the result of the RIP (e.g., Accepted or Rejected). Also, report the result of the RIP vote to the voting thread on the mailing list so the conclusion is clear.
+4. Please update the RIP wiki page, and the index below, to reflect the current stage[accept, reject, active, inactive, waiting for the owner] of the RIP after a vote. This acts as the permanent record indicating the result of the RIP (e.g., Accepted or Rejected). Also, report the result of the RIP vote to the voting thread on the mailing list so the conclusion is clear.
 
 
 ### RIP List
@@ -24,19 +24,19 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-5 | [RocketMQ ACL](https://github.com/apache/rocketmq/wiki/RIP-5-RocketMQ-ACL)| yes|active|yes|
 | RIP-6 | [RocketMQ Message Tracing](https://github.com/apache/rocketmq/wiki/RIP-6-Message-Trace)|yes|active|yes|
 | RIP-7 |[Multiple Directories Storage Support](https://github.com/apache/rocketmq/wiki/RIP-7-Multiple-Directories-Storage-Support) |yes|active|yes|
-| RIP-8 |[Consumer RACK Support](https://github.com/apache/rocketmq/wiki/RIP-8-Consumer-RACK-Support) |yes |waiting for owner|no|
+| RIP-8 |[Consumer RACK Support](https://github.com/apache/rocketmq/wiki/RIP-8-Consumer-RACK-Support) |yes |waiting for the owner|no|
 | RIP-9 |[RocketMQ Develop Guide](https://github.com/apache/rocketmq/wiki/RIP-9-RocketMQ-Developer-Guide) |yes |active|yes|
-| RIP-10 |[RocketMQ Unit Test](https://github.com/apache/rocketmq/wiki/RIP-10-RocketMQ-Unit-Test) |yes |waiting for owner|yes|
+| RIP-10 |[RocketMQ Unit Test](https://github.com/apache/rocketmq/wiki/RIP-10-RocketMQ-Unit-Test) |yes |waiting for the owner|yes|
 | RIP-11 |[Evolution of The Next Decade Architecture for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-11-Evolution-of-The-Next-Decade-Architecture-for-RocketMQ) |yes |active|no|
 | RIP-12 |[RocketMQ Replicator](https://github.com/apache/rocketmq/wiki/RIP-12-Message-Connector) |yes |active|yes|
 | RIP-13 |[RocketMQ Console Project](https://github.com/apache/rocketmq/wiki/RIP-13-RocketMQ-Console-Project) |yes |active|yes|
 | RIP-14 |[RocketMQ Community Operation Conventions](https://github.com/apache/rocketmq/wiki/RIP-14-RocketMQ-Community-Operation-Conventions) |yes |active|yes|
 | RIP-15 |[RocketMQ IPv6 Support Project](https://github.com/apache/rocketmq/wiki/RIP-15-RocketMQ-IPv6-Support-Project) |yes |active|yes|
 | RIP-16 |[RocketMQ RPC(Request-Response model) Support](https://github.com/apache/rocketmq/wiki/RIP-16-RocketMQ-RPC(Request-Response-model)-Support) |yes |active|yes|
-| RIP-17 |[RocketMQ HTTP Proxy Support](https://github.com/apache/rocketmq/wiki/RIP-17-RocketMQ-HTTP-Proxy-Support) |yes |waiting for owner|no|
-| RIP-18 |[Metadata management architecture upgrade](https://github.com/apache/rocketmq/wiki/RIP-18-Metadata-management-architecture-upgrade) |yes|waiting for owner|no|
+| RIP-17 |[RocketMQ HTTP Proxy Support](https://github.com/apache/rocketmq/wiki/RIP-17-RocketMQ-HTTP-Proxy-Support) |yes |waiting for the owner|no|
+| RIP-18 |[Metadata management architecture upgrade](https://github.com/apache/rocketmq/wiki/RIP-18-Metadata-management-architecture-upgrade) |yes|waiting for the owner|no|
 | RIP-19 |[Server-side rebalance,  lightweight consumer client](https://github.com/apache/rocketmq/wiki/%5BRIP-19%5D-Server-side-rebalance,--lightweight-consumer-client-support) |yes|active|yes|
-| RIP-20 |[Streaming Tiered Storage Optimize](https://github.com/apache/rocketmq/wiki/RIP-20-Streaming-Tiered-Storage-Optimize) |yes|waiting for owner|no|
+| RIP-20 |[Streaming Tiered Storage Optimize](https://github.com/apache/rocketmq/wiki/RIP-20-Streaming-Tiered-Storage-Optimize) |yes|waiting for the owner|no|
 | RIP-21 |[Logical Queue Abstraction for Static Topic and Fast Scale-out](https://github.com/apache/rocketmq/wiki/RIP-21-logical-queue-abstraction-for-static-topic-and-fast-scale-out) |yes|active|yes|
 | RIP-26 |[Improve Batch Message Processing Throughput](https://github.com/apache/rocketmq/wiki/RIP-26-Improve-Batch-Message-Processing-Throughput) |yes|active|yes|
 | RIP-27 |[Auto batching in producer](https://github.com/apache/rocketmq/wiki/RIP-27-Auto-batching-in-producer) |yes|active|no|
