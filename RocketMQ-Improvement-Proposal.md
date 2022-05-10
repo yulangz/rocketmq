@@ -51,6 +51,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-38 |[RocketMQ EventBridge](https://docs.google.com/document/d/1RWPeORHY_-ukq8qs1a1lH80fH8vSQ44U1R9xbxgEX_c/) |yes|active|no|
 | RIP-39 |[Support gRPC protocol](https://shimo.im/docs/gXqmeEPYgdUw5bqo) |yes|active|no|
 | RIP-40 |[RocketMQ play book](https://shimo.im/docs/EXvRnkuM5joy8d0E) |yes|active|no|
+| RIP-41 |[RocketMQ E2E Test](https://shimo.im/docs/pmkxQEOZmDiLwdAN) |yes|active|no|
 
 
 
