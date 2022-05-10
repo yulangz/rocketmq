@@ -8,8 +8,8 @@
 * Released: no
 ## Background & Motivation
 ### What do we need to do
-* e2e is an essential part of the test environment, we need to add a RocketMQ-e2e repository under ApacheRocketMQ to write e2e use cases
-* The process of adding GitHub Action under the RocketMQ repository, triggering during MergeRequest and Push, including but not limited to unit testing and e2e testing
+* e2e is an essential part of the test environment, we need to add a rocketmq-e2e repository under Apache RocketMQ to write e2e use cases
+* The process of adding GitHub Action under the Apache RocketMQ repository, triggering during Merge Request and Push, including but not limited to unit testing and e2e testing
 ### Why should we do that
 * Supplement the problem that the current e2e test is not sound
 * Resolve possible compatibility issues
@@ -19,14 +19,14 @@
 ### What problem is this proposal designed to solve?
 The main purpose of end-to-end (E2E) testing is to verify the integration, data integrity, and compatibility of Broker, NameServer, and Client by simulating real user scenarios, and to test from the use of end users.
 ### To what degree should we solve the problem?
-The JAVA client's externally exposed interface coverage rate is >95%, which can cover compatibility tests of multiple major versions to ensure that the trunk branch iteration will not cause compatibility problems
+The JAVA client's externally exposed interface coverage rate is > 95%, which can cover compatibility tests of multiple major versions to ensure that the trunk branch iteration will not cause compatibility problems
 ## Non-Goals
 ### What problem is this proposal NOT designed to solve?
 E2E testing is a supplement to the current unit testing and set testing, not a substitute for other testing methods.
 ### Are there any limits of this proposal?
 Due to the use of different code bases, updates to major functions need to synchronously add test cases to the E2E code base to ensure continuous iteration of test cases. At the same time, the user's usage scenarios are complex, and it is difficult to combine coverage of all scenarios and high coverage of interfaces.
 ## Changes
-We will provide a new project named rocketmq-e2e . Read below sections to get more details about the e2e test for RocketMQ.
+We will provide a new project named rocketmq-e2e. Read below sections to get more details about the e2e test for RocketMQ.
 ### Architecture
 ![](https://s1.ax1x.com/2022/05/10/ONASvq.png)
 
