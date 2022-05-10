@@ -1,7 +1,7 @@
 
 ## Status
 * Current State: development
-* Authors: YuanchenZhang(Github：cryptoya)
+* Authors: YuanchenZhang(Github:cryptoya)
 * Shepherds: duhengforever@apache.org dinglei@apache.org
 * Mailing List discussion: dev@rocketmq.apache.org
 * Pull Request:
