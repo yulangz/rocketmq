@@ -2,7 +2,7 @@
 ## Status
 Current State: Proposed 
 
-Authors: veritas2023@163.com 
+Authors: [szknb](https://github.com/szknb),[ferrirW](https://github.com/ferrirW)
 
 Shepherds: vongosling@apache.org
 
