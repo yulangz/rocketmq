@@ -1,7 +1,7 @@
 # Status
 
 - Current State: Proposed
-- Authors: jinrongtong@apache.org
+- Authors: [humkum](https://github.com/humkum), [ferrirW](https://github.com/ferrirW)
 - Shepherds: duhengforever@apache.org, vongosling@apache.org
 - Mailing List discussion: dev@rocketmq.apache.org
 - Pull Request: #PR_NUMBER
