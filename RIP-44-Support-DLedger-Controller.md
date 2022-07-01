@@ -692,11 +692,11 @@ Introduce external coordination components such as zookeeper, etcd to achieve sw
 
 ## Pros and Cons of alternatives
 
-Pros:
+**Pros:**
 
 There is no need to write part of the code of the controller, and the switching capability can be quickly realized
 
-Cons:
+**Cons:**
 
 Additional operation and maintenance costs are incurred after the introduction of external components
 
