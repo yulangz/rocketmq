@@ -3,7 +3,7 @@
 - Authors: [pingww](https://github.com/pingww)
 - Shepherds: duhengforever@apache.org
 - Mailing List discussion: dev@rocketmq.apache.org
-- Pull Request: 
+- Pull Request: https://github.com/apache/rocketmq-mqtt
 - Released: <relased_version>
 - Related Docs: https://docs.google.com/document/d/1AD1GkV9mqE_YFA97uVem4SmB8ZJSXiJZvzt7-K6Jons/edit#heading=h.i42fwfxz62gw
 # Background & Motivation
