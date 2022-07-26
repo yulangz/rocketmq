@@ -8,7 +8,7 @@
 
 ## Background & Motivation
 
-1. What do we need to do
+#### What do we need to do
 
 * Will we add a new module?
 
@@ -22,7 +22,7 @@
 
 No
 
-2. Why should we do that
+#### Why should we do that
 
 * Are there any problems with our current project?
 
