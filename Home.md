@@ -1,16 +1,16 @@
 # Overview
 
-Apache RocketMQ is a distributed messaging and streaming platform with low latency, high performance and reliability, trillion-level capacity and flexible scalability. It consists of four parts: name servers, brokers, producers and consumers. Each of them can be horizontally extended without a Single Point of Failure. As shown in the screenshot above.
+Apache RocketMQ is a distributed messaging and streaming platform with low latency, high performance and reliability, trillion-level capacity, and flexible scalability. It consists of four parts: name servers, brokers, producers, and consumers. Each of them can be horizontally scaled without a Single Point of Failure.
 
 
 
 **NameServer Cluster**
 
-Name Servers provide lightweight service discovery and routing. Each Name Server records full routing information, provides corresponding reading and writing service and supports fast storage expansion.
+Name Servers provide lightweight service discovery and routing. Each Name Server node maintains a complete routing table, supports registration and queries of service entries and makes clusters scale instantly in the end.
 
 **Broker Cluster**
 
-Brokers take care of message storage by providing lightweight TOPIC and QUEUE mechanisms. They support the Push and Pull model, contains fault tolerance mechanism (2 copies or 3 copies), and provides strong padding of peaks and capacity of accumulating hundreds of billion messages in their original time order. In addition, Brokers provide disaster recovery, rich metrics statistics, and alert mechanisms, all of which are lacking in traditional messaging systems.
+Brokers are in charge of message storage and retrieval. Data on brokers are organized logically by TOPIC and QUEUE. They support the Push and Pull model, contains fault tolerance mechanism (2 copies or 3 copies), and provides strong padding of peaks and capacity of accumulating hundreds of billion messages in their original time order. In addition, Brokers provide disaster recovery, rich metrics statistics, and alert mechanisms, all of which are lacking in traditional messaging systems.
 
 **Producer Cluster**
 
@@ -18,7 +18,7 @@ Producers support distributed deployment. Distributed Producers send messages to
 
 **Consumer Cluster**
 
-Consumers support distributed deployment in the Push and Pull model as well. It also supports cluster consumption and message broadcasting. It provides real-time message subscription mechanism and can meet most consumer requirements. 
+Consumers support distributed deployment in the Push and Pull model as well. It also supports cluster consumption and message broadcasting. It provides a real-time message subscription mechanism and can meet most consumer requirements. 
 RocketMQ’s website provides a simple quick-start guide to interested users.
 
 # NameServer
