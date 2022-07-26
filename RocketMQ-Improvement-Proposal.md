@@ -54,6 +54,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-40 |[RocketMQ play book](https://shimo.im/docs/EXvRnkuM5joy8d0E) |yes|active|no|
 | RIP-41 |[RocketMQ E2E Test](https://github.com/apache/rocketmq/wiki/RIP-41-RocketMQ-E2E-Test) |yes|active|no|
 | RIP-44 |[Support DLedger Controller](https://github.com/apache/rocketmq/wiki/RIP-44-Support-DLedger-Controller) |yes|active|no|
+| RIP-45 |[Support Graceful Shutdown](https://github.com/apache/rocketmq/wiki/RIP-45-Support-Graceful-Shutdown) |yes|active|no|
 
 
 
