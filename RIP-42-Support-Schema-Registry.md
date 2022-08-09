@@ -145,13 +145,23 @@ STRING | Unicode 字符集序列
 TIMESTAMP | 时间戳，保存形式为 64 位有符号整数
 
 #### Complex type 
-Type | Desc | Scenario | Scenario Desc
--- | -- | -- | --
-struct | AVRO, JSON, Thrift and Protobuf | specific | 已知要发送消息的数据类型、依赖
-generic | 不知道要发送消息的数据类型
-Binlog | Reserved for Binlog | mysql2rocketmq | 支持 mysql、tidb 等
-Text | Reserved for one-line-string | log2es | 支持日志场景
-
+<table>
+<tr>
+<th>Type</th><th>Desc</th><th>Scenario</th><th>Scenario Desc</th>
+</tr>
+<tr>
+<td rowspan=2>struct</td><td rowspan=2>AVRO, JSON, Thrift and Protobuf</td><td>specific</td><td>已知要发送消息的数据类型、依赖</td>
+</tr>
+<tr>
+<td>generic</td><td>不知道要发送消息的数据类型</td>
+</tr>
+<tr>
+<td>Binlog</td><td>Reserved for Binlog</td><td>mysql2rocketmq</td><td>支持 mysql、tidb 等</td>
+</tr>
+<tr>
+<td>Text</td><td>Reserved for one-line-string</td><td>log2es</td><td>支持日志场景</td>
+</tr>
+</table>
 #### Nested type 
 Not supported now
 
