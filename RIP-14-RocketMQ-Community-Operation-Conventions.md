@@ -1,6 +1,6 @@
 Status
 -----------------
-Current State: Discuss
+Current State: Released
       
 Authors: RongtongJin, duhengforever  
   
