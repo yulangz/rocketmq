@@ -12,7 +12,8 @@
 * Will we add new APIs? -- No.
 * Will we add new features? -- Yes.
 ### Why should we do that
-Are there any problems with our current project?
+
+#### Are there any problems with our current project?
  
 Currently, the RocketMQ kernel doesn't support metrics natively. Rocketmq community has a project, rocketmq-exporter, to grab broker runtime data and export it to Prometheus. This project suffers some limits:
  
@@ -21,7 +22,7 @@ Currently, the RocketMQ kernel doesn't support metrics natively. Rocketmq commun
 * Standard: currently, rocketmq-exporter doesn't follow the Prometheus metrics naming convention. This will bring confusion to users who want to build their monitoring system.
 * Applicability: rocketmq-exporter only supports broker metrics. With the release of RocketMQ 5.0, more modules also need to expose metrics.
 
-What can we benefit from proposed changes?
+#### What can we benefit from proposed changes?
  
 * Provides out-of-the-box metrics for broker and proxy. No need to deploy any other component.
 * Adapt to community observability standard.
