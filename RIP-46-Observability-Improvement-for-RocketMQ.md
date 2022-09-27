@@ -15,7 +15,7 @@
 
 #### Are there any problems with our current project?
  
-Currently, the RocketMQ kernel doesn't support metrics natively. Rocketmq community has a project, rocketmq-exporter, to grab broker runtime data and export it to Prometheus. This project suffers some limits:
+Currently, the RocketMQ kernel doesn't support metrics natively. RocketMQ community has a project, rocketmq-exporter, to grab broker runtime data and export it to Prometheus. This project suffers some limits:
  
 * Inconvenience: user who wants to build a monitor system must deploy a standalone component.
 * Performance: rocketmq-exporter grabs metrics data using mqadmin tools, which puts additional pressure on broker and client.
