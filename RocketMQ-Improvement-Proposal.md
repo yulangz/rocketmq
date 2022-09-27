@@ -57,6 +57,6 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-43 |[Support timing messages with arbitrary time delay](https://shimo.im/docs/gXqme9PKKpIeD7qo/read) |yes|active|no|
 | RIP-44 |[Support DLedger Controller](https://github.com/apache/rocketmq/wiki/RIP-44-Support-DLedger-Controller) |yes|active|no|
 | RIP-45 |[RocketMQ Replicator 2.0](https://github.com/apache/rocketmq/wiki/RIP-45-RocketMQ-Replicator-2.0) |yes|active|no|
-| RIP-46 |[Observability Improvement for RocketMQ](https://shimo.im/docs/m4kML2VzdESO9eqD) |yes|active|no|
+| RIP-46 |[Observability Improvement for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-46-Observability-improvement-for-RocketMQ) | pending |active|no|
 
 
