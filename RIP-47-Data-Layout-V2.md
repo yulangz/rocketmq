@@ -20,7 +20,7 @@ Clients prior to 5.x shares the exactly same data layout with store module on th
 
 There has been a few known limitations
 
-![Current Data Layout](assets/DataLayout_overall-v1.drawio.png)
+![Current Data Layout](https://raw.githubusercontent.com/wiki/apache/rocketmq/assets/DataLayout_overall-v1.drawio.png)
 
 1. Length of topic can be up to 128 bytes only; 
 2. Occasional properties length run-over after more system properties are appended.
@@ -47,7 +47,7 @@ Nothing specific.
 1. Current data layout is named v1. Brokers will, by default, assumes that client SDKs support v1.
 2. When messages stored in v2 format are to deliver to SDKs with v1 capability, they would be reflowed in v1 format.
 3. On connection, new SDKs would sync its capabilities to brokers, such that brokers may deliver messages in v2 format directly.
-4. Serialization and deserialization of v2 are supposed to be almost zero overhead. Overall, its format are as follows. ![V2 Format](assets/DataLayout_overall-v2.drawio.png)
+4. Serialization and deserialization of v2 are supposed to be almost zero overhead. Overall, its format are as follows. ![V2 Format](https://raw.githubusercontent.com/wiki/apache/rocketmq/assets/DataLayout_overall-v2.drawio.png)
 5. [FlatBuffers](https://google.github.io/flatbuffers/) is targeted for message header serialization and deserialization because 1) it has well supports among popular programming languages; 2) its IDL is backward and forward compatible when adding/removing fields; 3) its extremely [good performance](https://google.github.io/flatbuffers/flatbuffers_benchmarks.html)
 
 
