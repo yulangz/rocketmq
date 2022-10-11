@@ -28,12 +28,11 @@ N/A
 ## Architecture
 1. support batch OP message
 We realize that one OP message can correspond to multiple half messages, that is, write the queueOffset of multiple half messages in the body of the OP message.
-
 ![Transaction Architecture](https://intranetproxy.alipay.com/skylark/lark/0/2022/png/17832/1665488304489-e2ea5bcd-ad0b-423d-81e9-4284f861d27d.png?x-oss-process=image%2Fresize%2Cw_1889%2Climit_0)
-
 The implementation of batch OP messages is similar to the Nagle algorithm of tcp transmission, using two parameters of timing and specified size to control the writing of OP messages. First, the content corresponding to the OP message is aggregated in memory. If the body of the OP message exceeds the specified size (transactionOpMsgMaxSize defaults to 4096), the OP message is written. Otherwise, the timed (transactionOpBatchInterval defaults to 3 seconds) flushes the written OP message.
 Specific to the online optimization effect, the writing TPS of Half messages and OP messages can be up to 100:1. That is, one OP message corresponds to 100 Half messages. Of course, if the TPS of the Half message is higher, this ratio will be larger.
 For specific implementation, please refer to TransactionalMessageServiceImpl#batchSendOpMessage (timed write) and TransactionalMessageServiceImpl#deletePrepareMessage (specified size write)
+
 
 2. add half message memory cache
 Currently, Broker's default flushing mode is asynchronous flush, and data cannot be read from memory. If the sender commit/rollback in a short time, but the previously written Half message has not been placed on the disk and cannot be read, the commit/rollback will fail. Therefore, the half message is cached.
