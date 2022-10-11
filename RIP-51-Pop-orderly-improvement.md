@@ -48,6 +48,7 @@ Solve the above problems.
 ### Support changeInvisibleTime for pop orderly
 
 The basic function of changeInvisibleTime of pop orderly is the same as the changeInvisibleTime of normal messages, which is to modify the invisible time of a certain message to the time specified by the user. However, when pop message orderly in batch, in order to ensure the order of messages, its performance is different from the changeInvisibleTime of normal messages.
+
 After the next visibility time of a message has been changed to _T0_  by changeInvisibleTime
 
 - If this message is not Acked, then after _T0_ , repeatedly consume this message and the messages after the queue where this message is located.
@@ -58,7 +59,9 @@ For example
 <img src="https://user-images.githubusercontent.com/10397306/195077506-8b7762d2-7103-41f3-824d-c096a9a8d78b.png" width="1100px">
 
 If we ack Msg1 and Msg3 but changeInvisibleTime for Msg2, we will reconsume messages from Msg2 after next visibility time.
+
 We will use add a new field `offsetNextVisibleTime`in `ConsumerOrderInfoManager.OrderInfo` to to record the next visibility time of each offset.
+
 For example, we have pulled three messages through pop orderly at 00:00:00 AM, and the invisible time is 10s. Now, there will be three records in `OrderInfo` 
 
 <img src="https://user-images.githubusercontent.com/10397306/195077623-1c71d259-ad29-43dd-8c54-a0fc2d8c543e.png" width="630px">
@@ -77,12 +80,15 @@ Then, we change the next visibility time of the second message to 00:00:20 AM.
 <img src="https://user-images.githubusercontent.com/10397306/195077888-6ca9226d-5a8b-4dc9-8ccc-278f21a404bb.png" width="630px">
 
 If we not ack the second message, we will reconsume the second and thrid message after 00:00:20 AM.
+
 If we ack the second message before 00:00:20 AM, the consumer offset will move to 3.
 
 ### Add notification mechanism for pop orderly
 
 When the long polling requests of pop orderly hang on the broker, we need to wake up the hanging requests when there are messages available for consumption, so that the messages can be quickly pulled down by consumers. 
+
 When a queue that is popped orderly, there will be an in-memory lock to ensure its concurrency and sequentiality. When the lock is released, we can try to wake up the long polling request on the queue. We can use an in-memory timer to record the time which the lock is released. When the time is up, check to see if there is a message that can be pulled, and if so, wake up the pending long polling request.
+
 At the same time, when the user call popMessage, changeInvisibleTime, and ackMessage, it is also necessary to update the time which the lock is expected to be released.
 
 ## Interface Design/Change
