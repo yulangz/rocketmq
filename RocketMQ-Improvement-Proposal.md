@@ -60,7 +60,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-46 |[Observability Improvement for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-46-Observability-improvement-for-RocketMQ) |yes|active|no|
 | RIP-47 |[Data Layout V2](https://github.com/apache/rocketmq/wiki/RIP-47-Data-Layout-V2) |Discussing|active|no|
 | RIP-48 |[Enhance server-side offset management ability](https://github.com/apache/rocketmq/wiki/RIP-48-Enhance-server-side-offset-management-ability) |Discussing|active|no|
-| RIP-49 |[RocketMQ Remoting module improvement](https://github.com/apache/rocketmq/wiki/RIP-49-RocketMQ-Remoting-module-improvement)|Discussing|active|no|
+| RIP-49 |[RocketMQ remoting module improvement](https://github.com/apache/rocketmq/wiki/RIP-49-RocketMQ-remoting-module-improvement)|Discussing|active|no|
 
 
 
