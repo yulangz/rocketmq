@@ -1,7 +1,7 @@
 # Status
 - Current State: Proposed
 - Authors: [focus-rth](https://github.com/Focus-rth)
-- Shepherds: [fuyou001](https://github.com/fuyou001), [zhouxinyu](https://github.com/zhouxinyu), [lizhanhui](https://github.com/lizhanhui),不铭
+- Shepherds: [fuyou001](https://github.com/fuyou001), [zhouxinyu](https://github.com/zhouxinyu), [lizhanhui](https://github.com/lizhanhui)
 - Mailing List Discussion: dev@rocketmq.apache.org
 - Pull Request: #PR_NUMBER
 - Released: <released_version>
