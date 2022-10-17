@@ -63,6 +63,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-49 |[RocketMQ remoting module improvement](https://github.com/apache/rocketmq/wiki/RIP-49-RocketMQ-remoting-module-improvement)|Discussing|active|no|
 | RIP-50 |[RocketMQ Transaction Message Improvement](https://github.com/apache/rocketmq/wiki/RIP-50-RocketMQ-Transaction-Message-Improvement)|Discussing|active|no|
 | RIP-51 |[Pop orderly improvement](https://github.com/apache/rocketmq/wiki/RIP-51-Pop-orderly-improvement)|Discussing|active|no|
+| RIP-52 |[Optimize Building ConsumeQueue](https://github.com/apache/rocketmq/wiki/RIP-52-Optimize-Building-ConsumeQueue)|Discussing|active|no|
 
 
 
