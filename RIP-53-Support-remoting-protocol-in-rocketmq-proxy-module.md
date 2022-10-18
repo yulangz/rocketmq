@@ -31,7 +31,7 @@ With remoting protocol in proxy, the remoting client is able to connect to proxy
 
 **What problem is this proposal designed to solve?**
 
-- Supporting RPC in remoting protocol related to messaging and connection.
+- Supporting RPC with remoting protocol related to messaging and connection in proxy.
 
 # Non-Goals
 
