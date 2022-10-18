@@ -79,21 +79,13 @@ SEND_BATCH_MESSAGE
 LITE_PULL_MESSAGE
 ```
 
-- Method signature changes? 
+- Method signature changes? Nothing specific.
 
-Nothing specific.
+- Method behavior changes? Nothing specific.
 
-- Method behavior changes?
+- CLI command changes? Nothing specific.
 
-Nothing specific.
-
-- CLI command changes? 
-
-Nothing specific.
-
-- Log format or content changes? 
-
-Nothing specific.
+- Log format or content changes? Nothing specific.
 
 ## Compatibility, Deprecation, and Migration Plan
 
