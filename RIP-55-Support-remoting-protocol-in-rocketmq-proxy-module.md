@@ -36,7 +36,7 @@ With remoting protocol in proxy, the remoting client is able to connect to proxy
 # Non-Goals
 
 - Do not support admin interface. The methods related to the admin interface are considered internal operations and should follow the way of connecting to namesrv.
-- Do not support request-reply cause it's not widely used and hasn't reached maturity.
+- Do not support request-reply for now.
 
 # Changes
 
