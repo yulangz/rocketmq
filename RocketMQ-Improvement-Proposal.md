@@ -50,7 +50,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-35 |[Use rocketmq instead of mysql as state store](https://shimo.im/docs/pjDRKHqtdQC9RWCg) |yes|active|no|
 | RIP-37 |[New and Unified APIs](https://shimo.im/docs/m5kv92OeRRU8olqX) |yes|active|no|
 | RIP-38 |[RocketMQ EventBridge](https://docs.google.com/document/d/1RWPeORHY_-ukq8qs1a1lH80fH8vSQ44U1R9xbxgEX_c/) |yes|active|no|
-| RIP-39 |[Support gRPC protocol](https://shimo.im/docs/gXqmeEPYgdUw5bqo) |yes|active|no|
+| RIP-39 |[Support gRPC protocol](https://shimo.im/docs/gXqmeEPYgdUw5bqo) |yes|active|yes|
 | RIP-40 |[RocketMQ play book](https://shimo.im/docs/EXvRnkuM5joy8d0E) |yes|active|no|
 | RIP-41 |[RocketMQ E2E Test](https://github.com/apache/rocketmq/wiki/RIP-41-RocketMQ-E2E-Test) |yes|active|no|
 | RIP-42 |[Support Schema Registry](https://github.com/apache/rocketmq/wiki/RIP-42-Support-Schema-Registry) |yes|active|no|
