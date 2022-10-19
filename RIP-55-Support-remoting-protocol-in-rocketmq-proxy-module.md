@@ -44,6 +44,8 @@ With remoting protocol in proxy, the remoting client is able to connect to proxy
 
 ![image](https://user-images.githubusercontent.com/20906038/196327732-aa0d0042-c8a1-49ba-b863-266f09ee0ba5.png)
 
+The proxy will add a new remoting protocol server to support the request code above. Also, the protocol negotiation module will be introduced to proxy to handle multiple transport protocols in one network access point. 
+Client connection will be managed in the proxy. Furthermore, messaging-related modules like sending and receiving all kinds of messages will also be implemented.
 
 ## Interface Design/Change
 
