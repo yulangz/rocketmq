@@ -42,20 +42,20 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-27 |[Auto batching in producer](https://github.com/apache/rocketmq/wiki/RIP-27-Auto-batching-in-producer) |yes|active|no|
 | RIP-28 |[Light message queue (LMQ)](https://github.com/apache/rocketmq/wiki/RIP-28-Light-message-queue-(LMQ)) |yes|active|yes|
 | RIP-29 |[Optimize RocketMQ NameServer](https://github.com/apache/rocketmq/wiki/RIP-29-Optimize-RocketMQ-NameServer) |yes|active|no|
-| RIP-30 |[Support Compaction topic](https://github.com/apache/rocketmq/wiki/RIP-30-Support-Compaction-topic) |yes|active|no|
+| RIP-30 |[Support Compaction topic](https://github.com/apache/rocketmq/wiki/RIP-30-Support-Compaction-topic) |yes|active|yes|
 | RIP-31 |[Support RocketMQ BrokerContainer](https://github.com/apache/rocketmq/wiki/RIP-31-Support-RocketMQ-BrokerContainer) |yes|active|no|
-| RIP-32 |[Slave Acting Master Mode](https://github.com/apache/rocketmq/wiki/RIP-32-Slave-Acting-Master-Mode) |yes|active|no|
-| RIP-33 |[RocketMQ MQTT](https://github.com/apache/rocketmq/wiki/RIP-33-RocketMQ-MQTT) |yes|active|no|
+| RIP-32 |[Slave Acting Master Mode](https://github.com/apache/rocketmq/wiki/RIP-32-Slave-Acting-Master-Mode) |yes|active|yes|
+| RIP-33 |[RocketMQ MQTT](https://github.com/apache/rocketmq/wiki/RIP-33-RocketMQ-MQTT) |yes|active|yes|
 | RIP-34 |[Support quorum write and adaptive degradation in master slave architecture](https://github.com/apache/rocketmq/wiki/RIP-34-Support-quorum-write-and-adaptive-degradation-in-master-slave-architecture) |yes|active|no|
 | RIP-35 |[Use rocketmq instead of mysql as state store](https://shimo.im/docs/pjDRKHqtdQC9RWCg) |yes|active|no|
-| RIP-37 |[New and Unified APIs](https://shimo.im/docs/m5kv92OeRRU8olqX) |yes|active|no|
-| RIP-38 |[RocketMQ EventBridge](https://docs.google.com/document/d/1RWPeORHY_-ukq8qs1a1lH80fH8vSQ44U1R9xbxgEX_c/) |yes|active|no|
+| RIP-37 |[New and Unified APIs](https://shimo.im/docs/m5kv92OeRRU8olqX) |yes|active|yes|
+| RIP-38 |[RocketMQ EventBridge](https://docs.google.com/document/d/1RWPeORHY_-ukq8qs1a1lH80fH8vSQ44U1R9xbxgEX_c/) |yes|active|yes|
 | RIP-39 |[Support gRPC protocol](https://shimo.im/docs/gXqmeEPYgdUw5bqo) |yes|active|yes|
 | RIP-40 |[RocketMQ play book](https://shimo.im/docs/EXvRnkuM5joy8d0E) |yes|active|no|
 | RIP-41 |[RocketMQ E2E Test](https://github.com/apache/rocketmq/wiki/RIP-41-RocketMQ-E2E-Test) |yes|active|no|
 | RIP-42 |[Support Schema Registry](https://github.com/apache/rocketmq/wiki/RIP-42-Support-Schema-Registry) |yes|active|no|
-| RIP-43 |[Support timing messages with arbitrary time delay](https://shimo.im/docs/gXqme9PKKpIeD7qo/read) |yes|active|no|
-| RIP-44 |[Support DLedger Controller](https://github.com/apache/rocketmq/wiki/RIP-44-Support-DLedger-Controller) |yes|active|no|
+| RIP-43 |[Support timing messages with arbitrary time delay](https://shimo.im/docs/gXqme9PKKpIeD7qo/read) |yes|active|yes|
+| RIP-44 |[Support DLedger Controller](https://github.com/apache/rocketmq/wiki/RIP-44-Support-DLedger-Controller) |yes|active|yes|
 | RIP-45 |[RocketMQ Replicator 2.0](https://github.com/apache/rocketmq/wiki/RIP-45-RocketMQ-Replicator-2.0) |yes|active|no|
 | RIP-46 |[Observability Improvement for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-46-Observability-improvement-for-RocketMQ) |yes|active|no|
 | RIP-47 |[Data Layout V2](https://github.com/apache/rocketmq/wiki/RIP-47-Data-Layout-V2) |Discussing|active|no|
