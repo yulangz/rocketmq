@@ -42,7 +42,7 @@ No interface changes involved.
 ### Compatibility, Deprecation, and Migration Plan
 
 This RIP doesn't introduce any compatibility issues.
-Implementation Outline
+### Implementation Outline
 ## Rejected Alternatives
 
 I think there is no other cadicate alternatives.
