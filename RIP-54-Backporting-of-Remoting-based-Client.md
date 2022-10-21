@@ -1,6 +1,6 @@
 ## Status
-Current State: Proposed
-Authors:[ aaron-ai](https://github.com/aaron-ai)
+* Current State: Proposed
+* Authors:[ aaron-ai](https://github.com/aaron-ai)
 * Shepherds:[ lizhanhui](https://github.com/lizhanhui),[ zhouxinyu](https://github.com/zhouxinyu)
 * Mailing List Discussion: dev@rocketmq.apache.org
 * Pull Request: #PR_NUMBER
