@@ -31,7 +31,7 @@ Nothing specific.
 
 ![image](https://user-images.githubusercontent.com/19537356/197122276-c3537479-82c8-4c5b-8a0c-437daa0cbb41.png)
 
-We intent to shade logback to replace the existing logging module. To avoid the clash of configuration file, the shaded logback will use rmq.logback.xml/rmq-logback-test.xml/rmq-logback.groovy rather than original logback.xml/logback-test.xml/logback.groovy.
+We intend to shade logback to replace the existing logging module. To avoid the clash of configuration file, the shaded logback will use rmq.logback.xml/rmq-logback-test.xml/rmq-logback.groovy rather than original logback.xml/logback-test.xml/logback.groovy.
 
 Especially, the key of system property and environment is also be shaded to keep the original logback and the shaded logback independent.
 
