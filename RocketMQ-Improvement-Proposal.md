@@ -66,5 +66,6 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-52 |[Optimize Building ConsumeQueue](https://github.com/apache/rocketmq/wiki/RIP-52-Optimize-Building-ConsumeQueue)|Discussing|active|no|
 | RIP-54 |[Backporting of Remoting-based Client](https://github.com/apache/rocketmq/wiki/RIP-54-Backporting-of-Remoting-based-Client)|Discussing|active|no|
 | RIP-55 |[Support Remoting Protocol in RocketMQ Proxy Module](https://github.com/apache/rocketmq/wiki/RIP-55-Support-remoting-protocol-in-rocketmq-proxy-module)|Discussing|active|no|
+| RIP-56 |[Replace Logging Module with Shaded Loback](https://github.com/apache/rocketmq/wiki/RIP-55-Support-remoting-protocol-in-rocketmq-proxy-module)|Discussing|active|no|
 
 
