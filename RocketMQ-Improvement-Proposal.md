@@ -59,8 +59,8 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-45 |[RocketMQ Replicator 2.0](https://github.com/apache/rocketmq/wiki/RIP-45-RocketMQ-Replicator-2.0) |yes|active|no|
 | RIP-46 |[Observability Improvement for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-46-Observability-improvement-for-RocketMQ) |yes|active|no|
 | RIP-47 |[Data Layout V2](https://github.com/apache/rocketmq/wiki/RIP-47-Data-Layout-V2) |Discussing|active|no|
-| RIP-48 |[Enhance Server-side Offset Management Ability](https://github.com/apache/rocketmq/wiki/RIP-48-Enhance-server-side-offset-management-ability) |Discussing|active|no|
-| RIP-49 |[RocketMQ Remoting Module Improvement](https://github.com/apache/rocketmq/wiki/RIP-49-RocketMQ-remoting-module-improvement)|Discussing|active|no|
+| RIP-48 |[Enhance Server-side Offset Management Ability](https://github.com/apache/rocketmq/wiki/RIP-48-Enhance-server-side-offset-management-ability) |yes|active|no|
+| RIP-49 |[RocketMQ Remoting Module Improvement](https://github.com/apache/rocketmq/wiki/RIP-49-RocketMQ-remoting-module-improvement)|yes|active|no|
 | RIP-50 |[RocketMQ Transaction Message Improvement](https://github.com/apache/rocketmq/wiki/RIP-50-RocketMQ-Transaction-Message-Improvement)|Discussing|active|no|
 | RIP-51 |[Pop Orderly Improvement](https://github.com/apache/rocketmq/wiki/RIP-51-Pop-orderly-improvement)|Discussing|active|no|
 | RIP-52 |[Optimize Building ConsumeQueue](https://github.com/apache/rocketmq/wiki/RIP-52-Optimize-Building-ConsumeQueue)|yes|active|no|
