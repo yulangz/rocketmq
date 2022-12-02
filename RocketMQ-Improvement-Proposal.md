@@ -62,7 +62,7 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-48 |[Enhance Server-side Offset Management Ability](https://github.com/apache/rocketmq/wiki/RIP-48-Enhance-server-side-offset-management-ability) |yes|active|no|
 | RIP-49 |[RocketMQ Remoting Module Improvement](https://github.com/apache/rocketmq/wiki/RIP-49-RocketMQ-remoting-module-improvement)|yes|active|no|
 | RIP-50 |[RocketMQ Transaction Message Improvement](https://github.com/apache/rocketmq/wiki/RIP-50-RocketMQ-Transaction-Message-Improvement)|Discussing|active|no|
-| RIP-51 |[Pop Orderly Improvement](https://github.com/apache/rocketmq/wiki/RIP-51-Pop-orderly-improvement)|Discussing|active|no|
+| RIP-51 |[Pop Orderly Improvement](https://github.com/apache/rocketmq/wiki/RIP-51-Pop-orderly-improvement)|yes|active|no|
 | RIP-52 |[Optimize Building ConsumeQueue](https://github.com/apache/rocketmq/wiki/RIP-52-Optimize-Building-ConsumeQueue)|yes|active|no|
 | RIP-54 |[Backporting of Remoting-based Client](https://github.com/apache/rocketmq/wiki/RIP-54-Backporting-of-Remoting-based-Client)| yes |active|no|
 | RIP-55 |[Support Remoting Protocol in RocketMQ Proxy Module](https://github.com/apache/rocketmq/wiki/RIP-55-Support-remoting-protocol-in-rocketmq-proxy-module)|yes|active|no|
