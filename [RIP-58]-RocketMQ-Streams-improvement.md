@@ -2,7 +2,7 @@
 
 -  Current State: Proposed
 
-- Authors: [Ni Ze]](https://github.com/ni-ze)
+- Authors: [Ni Ze](https://github.com/ni-ze)
 
 - Shepherds: [ShannonDing](https://github.com/ShannonDing) [RongtongJin](https://github.com/RongtongJin)
 
