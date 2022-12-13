@@ -2,9 +2,9 @@
 
 -  Current State: Proposed
 
-- Authors: [[Ni Ze](https://github.com/ni-ze)](https://github.com/ni-ze)
+- Authors: [Ni Ze]](https://github.com/ni-ze)
 
-- Shepherds: [[ShannonDing](https://github.com/ShannonDing)](https://github.com/ShannonDing) [[RongtongJin](https://github.com/RongtongJin)](https://github.com/RongtongJin)
+- Shepherds: [ShannonDing](https://github.com/ShannonDing) [RongtongJin](https://github.com/RongtongJin)
 
 - Mailing List Discussion: [dev@rocketmq.apache.org](mailto:dev@rocketmq.apache.org)
 
