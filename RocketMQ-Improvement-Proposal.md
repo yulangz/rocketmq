@@ -69,3 +69,4 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-56 |[Replace Logging Module with Shaded Loback](https://github.com/apache/rocketmq/wiki/RIP-56-Replace-Logging-Module-with-Shaded-Logback)| yes |active|no|
 | RIP-57 |[Tiered storage for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-57-Tiered-storage-for-RocketMQ)| Discussing |active|no|
 |RIP-58| [RocketMQ Streams improvement](https://github.com/apache/rocketmq/wiki/%5BRIP-58%5D-RocketMQ-Streams-improvement)|yes|active|no|
+|RIP-59| [RocketMQ EventBridge Runtime](https://github.com/apache/rocketmq-eventbridge/wiki/EventBridge-Runtime)|Discussing|active|no|
