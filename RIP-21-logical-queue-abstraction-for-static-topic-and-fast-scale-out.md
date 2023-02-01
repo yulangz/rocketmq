@@ -7,7 +7,7 @@ Below is Markdown text with some GFM syntax.
 - Mailing List discussion: dev@rocketmq.apache.org
 - Pull Request: #PR_NUMBER
 - Released: <relased_version>
-- Related CN Docs: [static_topic_logic_queue_design](https://github.com/apache/rocketmq/blob/5.0.0-alpha/docs/cn/statictopic/RocketMQ_Static_Topic_Logic_Queue_%E8%AE%BE%E8%AE%A1.md)
+- Related CN Docs: [static_topic_logic_queue_design](https://github.com/apache/rocketmq/blob/develop/docs/cn/statictopic/RocketMQ_Static_Topic_Logic_Queue_%E8%AE%BE%E8%AE%A1.md)
 
 # Background & Motivation
 What do we need to do
