@@ -107,7 +107,7 @@ The messages produced by the producer are written to CommitLog, and the ReputMes
 
 5、The DispatchService thread takes out the checked CommitLog messages sequentially, converts the CommitLog messages into ConsumeQueue messages and writes them to ConsumeQueue
 
-![img](https://yu7y22ce7k.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTQxMDRhZmRhYzc2Y2QxMTM5ZTAwZWQ1N2JjODVmNDhfZ1o0OWhiZ1ZjM0ZQdEVKRHZhbFVWY1NJQURESE9xdVRfVG9rZW46Ym94Y25JNmJsYjF4aHJ2dVVDcGxPeWxHUExnXzE2NzYwMDUxMjg6MTY3NjAwODcyOF9WNA)
+![img](https://raw.githubusercontent.com/wiki/apache/rocketmq/assets/RIP_52_new_way.png)
 
 
 
