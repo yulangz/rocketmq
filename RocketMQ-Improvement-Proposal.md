@@ -57,16 +57,16 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-43 |[Support Timing Messages with Arbitrary Time Delay](https://shimo.im/docs/gXqme9PKKpIeD7qo/read) |yes|active|yes|
 | RIP-44 |[Support DLedger Controller](https://github.com/apache/rocketmq/wiki/RIP-44-Support-DLedger-Controller) |yes|active|yes|
 | RIP-45 |[RocketMQ Replicator 2.0](https://github.com/apache/rocketmq/wiki/RIP-45-RocketMQ-Replicator-2.0) |yes|active|no|
-| RIP-46 |[Observability Improvement for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-46-Observability-improvement-for-RocketMQ) |yes|active|no|
+| RIP-46 |[Observability Improvement for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-46-Observability-improvement-for-RocketMQ) |yes|active|yes|
 | RIP-47 |[Data Layout V2](https://github.com/apache/rocketmq/wiki/RIP-47-Data-Layout-V2) |Discussing|active|no|
-| RIP-48 |[Enhance Server-side Offset Management Ability](https://github.com/apache/rocketmq/wiki/RIP-48-Enhance-server-side-offset-management-ability) |yes|active|no|
-| RIP-49 |[RocketMQ Remoting Module Improvement](https://github.com/apache/rocketmq/wiki/RIP-49-RocketMQ-remoting-module-improvement)|yes|active|no|
-| RIP-50 |[RocketMQ Transaction Message Improvement](https://github.com/apache/rocketmq/wiki/RIP-50-RocketMQ-Transaction-Message-Improvement)|yes|active|no|
-| RIP-51 |[Pop Orderly Improvement](https://github.com/apache/rocketmq/wiki/RIP-51-Pop-orderly-improvement)|yes|active|no|
-| RIP-52 |[Optimize Building ConsumeQueue](https://github.com/apache/rocketmq/wiki/RIP-52-Optimize-Building-ConsumeQueue)|yes|active|no|
+| RIP-48 |[Enhance Server-side Offset Management Ability](https://github.com/apache/rocketmq/wiki/RIP-48-Enhance-server-side-offset-management-ability) |yes|active|yes|
+| RIP-49 |[RocketMQ Remoting Module Improvement](https://github.com/apache/rocketmq/wiki/RIP-49-RocketMQ-remoting-module-improvement)|yes|active|yes|
+| RIP-50 |[RocketMQ Transaction Message Improvement](https://github.com/apache/rocketmq/wiki/RIP-50-RocketMQ-Transaction-Message-Improvement)|yes|active|yes|
+| RIP-51 |[Pop Orderly Improvement](https://github.com/apache/rocketmq/wiki/RIP-51-Pop-orderly-improvement)|yes|active|yes|
+| RIP-52 |[Optimize Building ConsumeQueue](https://github.com/apache/rocketmq/wiki/RIP-52-Optimize-Building-ConsumeQueue)|yes|active|yes|
 | RIP-54 |[Backporting of Remoting-based Client](https://github.com/apache/rocketmq/wiki/RIP-54-Backporting-of-Remoting-based-Client)| yes |active|no|
-| RIP-55 |[Support Remoting Protocol in RocketMQ Proxy Module](https://github.com/apache/rocketmq/wiki/RIP-55-Support-remoting-protocol-in-rocketmq-proxy-module)|yes|active|no|
-| RIP-56 |[Replace Logging Module with Shaded Loback](https://github.com/apache/rocketmq/wiki/RIP-56-Replace-Logging-Module-with-Shaded-Logback)| yes |active|no|
-| RIP-57 |[Tiered storage for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-57-Tiered-storage-for-RocketMQ)| Discussing |active|no|
+| RIP-55 |[Support Remoting Protocol in RocketMQ Proxy Module](https://github.com/apache/rocketmq/wiki/RIP-55-Support-remoting-protocol-in-rocketmq-proxy-module)|yes|active|yes|
+| RIP-56 |[Replace Logging Module with Shaded Loback](https://github.com/apache/rocketmq/wiki/RIP-56-Replace-Logging-Module-with-Shaded-Logback)| yes |active|yes|
+| RIP-57 |[Tiered storage for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-57-Tiered-storage-for-RocketMQ)| Discussing |active|yes|
 |RIP-58| [RocketMQ Streams improvement](https://github.com/apache/rocketmq/wiki/%5BRIP-58%5D-RocketMQ-Streams-improvement)|yes|active|no|
 |RIP-61| [RocketMQ EventBridge Runtime](https://github.com/apache/rocketmq-eventbridge/wiki/EventBridge-Runtime)|Discussing|active|no|
