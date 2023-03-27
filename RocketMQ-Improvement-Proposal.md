@@ -67,9 +67,9 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 | RIP-54 |[Backporting of Remoting-based Client](https://github.com/apache/rocketmq/wiki/RIP-54-Backporting-of-Remoting-based-Client)| yes |active|no|
 | RIP-55 |[Support Remoting Protocol in RocketMQ Proxy Module](https://github.com/apache/rocketmq/wiki/RIP-55-Support-remoting-protocol-in-rocketmq-proxy-module)|yes|active|yes|
 | RIP-56 |[Replace Logging Module with Shaded Loback](https://github.com/apache/rocketmq/wiki/RIP-56-Replace-Logging-Module-with-Shaded-Logback)| yes |active|yes|
-| RIP-57 |[Tiered storage for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-57-Tiered-storage-for-RocketMQ)| Discussing |active|yes|
+| RIP-57 |[Tiered storage for RocketMQ](https://github.com/apache/rocketmq/wiki/RIP-57-Tiered-storage-for-RocketMQ)| yes|active|yes|
 |RIP-58| [RocketMQ Streams improvement](https://github.com/apache/rocketmq/wiki/%5BRIP-58%5D-RocketMQ-Streams-improvement)|yes|active|no|
 |RIP-59| [Support DLedger Controller Snapshot](https://docs.google.com/document/d/1jiKtv5WRDqlgZLGYK0oHuZww1r7KKrnTdRGf_eDIQy8/edit#heading=h.au5yeews2yp4)|yes|active|no|
 |RIP-61| [RocketMQ EventBridge Runtime](https://github.com/apache/rocketmq-eventbridge/wiki/EventBridge-Runtime)|Discussing|active|no|
 |RIP-62| [Cold read control](https://docs.google.com/document/d/1P8JPX5b9CwYMlaFi_UBxqwxFoIiOXWuAEjV4yWdfFUw/edit)|yes|active|no|
-|RIP-63| [Reachable broker detector in client](https://github.com/apache/rocketmq/wiki/RIP-63-Reachable-broker-detector-in-client)|discussing|active|no|
+|RIP-63| [Reachable broker detector in client](https://github.com/apache/rocketmq/wiki/RIP-63-Reachable-broker-detector-in-client)|Discussing|active|no|
