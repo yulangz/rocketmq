@@ -72,3 +72,4 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 |RIP-59| [Support DLedger Controller Snapshot](https://docs.google.com/document/d/1jiKtv5WRDqlgZLGYK0oHuZww1r7KKrnTdRGf_eDIQy8/edit#heading=h.au5yeews2yp4)|yes|active|no|
 |RIP-61| [RocketMQ EventBridge Runtime](https://github.com/apache/rocketmq-eventbridge/wiki/EventBridge-Runtime)|Discussing|active|no|
 |RIP-62| [Cold read control](https://docs.google.com/document/d/1P8JPX5b9CwYMlaFi_UBxqwxFoIiOXWuAEjV4yWdfFUw/edit)|yes|active|no|
+|RIP-62| [Reachable broker detector in client](https://github.com/apache/rocketmq/wiki/RIP-63-Reachable-broker-detector-in-client)|discussing|active|no|
