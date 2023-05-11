@@ -74,3 +74,4 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 |RIP-62| [Cold read control](https://docs.google.com/document/d/1P8JPX5b9CwYMlaFi_UBxqwxFoIiOXWuAEjV4yWdfFUw/edit)|yes|active|no|
 |RIP-63| [Queue selection strategy optimization](https://github.com/apache/rocketmq/wiki/RIP-63-Queue-selection-strategy-optimization)|Yes|active|no|
 |RIP-64| [Heartbeat Optimization](https://docs.google.com/document/d/174p0N7yDX0p_jvaujwHGFsZ410FKbq3vqGT1RUUyV1c/edit)|Yes|active|no|
+|RIP-65| [Tiered Storage Optimization](https://github.com/apache/rocketmq/wiki/RIP-65-Tiered-Storage-Optimization)|In discuss|active|no|
