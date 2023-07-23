@@ -71,7 +71,8 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 |RIP-58| [RocketMQ Streams improvement](https://github.com/apache/rocketmq/wiki/%5BRIP-58%5D-RocketMQ-Streams-improvement)|yes|active|no|
 |RIP-59| [Support DLedger Controller Snapshot](https://docs.google.com/document/d/1jiKtv5WRDqlgZLGYK0oHuZww1r7KKrnTdRGf_eDIQy8/edit#heading=h.au5yeews2yp4)|yes|active|no|
 |RIP-61| [RocketMQ EventBridge Runtime](https://github.com/apache/rocketmq-eventbridge/wiki/EventBridge-Runtime)|yes|active|no|
-|RIP-62| [Cold read control](https://docs.google.com/document/d/1P8JPX5b9CwYMlaFi_UBxqwxFoIiOXWuAEjV4yWdfFUw/edit)|yes|active|no|
+|RIP-62| [Cold read control](https://docs.google.com/document/d/1P8JPX5b9CwYMlaFi_UBxqwxFoIiOXWuAEjV4yWdfFUw/edit)|yes|active|yes|
 |RIP-63| [Queue selection strategy optimization](https://github.com/apache/rocketmq/wiki/RIP-63-Queue-selection-strategy-optimization)|Yes|active|no|
-|RIP-64| [Heartbeat Optimization](https://docs.google.com/document/d/174p0N7yDX0p_jvaujwHGFsZ410FKbq3vqGT1RUUyV1c/edit)|Yes|active|no|
+|RIP-64| [Heartbeat Optimization](https://docs.google.com/document/d/174p0N7yDX0p_jvaujwHGFsZ410FKbq3vqGT1RUUyV1c/edit)|Yes|active|yes|
 |RIP-65| [Tiered Storage Optimization](https://github.com/apache/rocketmq/wiki/RIP-65-Tiered-Storage-Optimization)|In discuss|active|no|
+|RIP-66| [Support KV(Rocksdb) Storage](https://github.com/apache/rocketmq/wiki/RIP-66-Support-KV(Rocksdb)-Storage)|Yes|active|no|
