@@ -76,3 +76,4 @@ It is easy to start a RIP from sending proposals to dev mail lists. And the whol
 |RIP-64| [Heartbeat Optimization](https://docs.google.com/document/d/174p0N7yDX0p_jvaujwHGFsZ410FKbq3vqGT1RUUyV1c/edit)|Yes|active|yes|
 |RIP-65| [Tiered Storage Optimization](https://github.com/apache/rocketmq/wiki/RIP-65-Tiered-Storage-Optimization)|In discuss|active|no|
 |RIP-66| [Support KV(Rocksdb) Storage](https://github.com/apache/rocketmq/wiki/RIP-66-Support-KV(Rocksdb)-Storage)|Yes|active|no|
+|RIP-67| [jRaft-Controller-Implemention](https://github.com/apache/rocketmq/wiki/RIP-67-jRaft-Controller-Implemention)|Yes|active|no|
